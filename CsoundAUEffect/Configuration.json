@@ -1,0 +1,5 @@
+{
+    "ViewBundleID":"CsoundAUEffectView",
+    "ViewFactoryClass":"CsoundAUEffectView_ViewFactory",
+    "csd":"Test_CsoundAUEffect"
+}

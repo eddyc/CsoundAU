@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CsoundAUSynthView_ViewFactory">
+            <connections>
+                <outlet property="uiFreshlyLoadedView" destination="c22-O7-iKe" id="uNJ-xJ-IV4"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" userLabel="CsoundAUSynthView" customClass="CsoundAUSynthView_UIView">
+            <rect key="frame" x="0.0" y="1" width="132" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-xb-XXQ" userLabel="Frequency Slider">
+                    <rect key="frame" x="54" y="63" width="20" height="162"/>
+                    <sliderCell key="cell" continuous="YES" alignment="left" minValue="0.5" maxValue="200" doubleValue="2" tickMarkPosition="right" sliderType="linear" id="0hd-Ul-kp0"/>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbY-PP-X7X" userLabel="Frequency Label">
+                    <rect key="frame" x="30" y="27" width="69" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Frequency" id="KGN-Kj-Xi1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="frequencySlider" destination="JL8-xb-XXQ" id="UbF-FC-T07"/>
+            </connections>
+            <point key="canvasLocation" x="-286" y="331"/>
+        </customView>
+    </objects>
+</document>
