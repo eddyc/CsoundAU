@@ -2,7 +2,10 @@
 Enables running Csound instruments or effects as AudioUnits for use in Logic, GarageBand etc.
 
 ## Dependencies
-Xcode 6+, AU Lab (available as part of Audio Tools for Xcode from https://developer.apple.com/downloads/)
+- Xcode 6+
+- AU Lab (available as part of Audio Tools for Xcode from https://developer.apple.com/downloads/)
+- Csound
+
 
 ## Description
 
