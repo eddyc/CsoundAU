@@ -29,7 +29,8 @@
     AudioUnit mAU;
     AUEventListenerRef mAUEventListener;
 }
-
+@property NSString *nibName;
 - (void)setAU:(AudioUnit)inAU;
 - (void)setParameter:(NSString *)parameterName forOutlet:(NSControl *)outlet;
+- (void)registerParameters;
 @end

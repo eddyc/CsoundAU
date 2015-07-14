@@ -34,6 +34,7 @@ void checkError(OSStatus error)
 @interface CsoundAUView ()
 {
     vector<Parameter> parameters;
+    map<string, string> configuration;
     map<string, size_t> parameterIndices;
     NSMutableArray *registeredParameters;
 }
@@ -54,6 +55,11 @@ void checkError(OSStatus error)
     
 }
 
+- (void)registerParameters
+{
+    
+}
+
 - (void)setAU:(AudioUnit)inAU
 {
     NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLEID];
@@ -63,6 +69,8 @@ void checkError(OSStatus error)
                             stringByDeletingLastPathComponent];
     string auBundlePath = [[[NSBundle bundleWithPath:bundlePath] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding];
     parameters = parseParameters(auBundlePath);
+    configuration = parseConfiguration(auBundlePath);
+    _nibName = [NSString stringWithUTF8String:configuration["NibName"].c_str()];
     registeredParameters = [[NSMutableArray alloc] initWithCapacity:parameters.size()];
     
     for (size_t i = 0; i < parameters.size(); ++i) {
@@ -79,6 +87,8 @@ void checkError(OSStatus error)
     mAU = inAU;
     
     [self priv_addListeners];
+    
+    [self registerParameters];
 }
 
 - (void)priv_synchroniseUIWithParameterValues:(UInt32)parameterIndex {

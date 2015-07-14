@@ -23,11 +23,9 @@
 #import <AudioUnit/AUCocoaUIView.h>
 #import "CsoundAUView.h"
 
-@class CsoundAUEffectView_UIView;
-
-@interface CsoundAUEffectView_ViewFactory : CsoundAUView <AUCocoaUIBase>
+@interface CsoundAUViewFactory : NSObject <AUCocoaUIBase>
 {
-    IBOutlet CsoundAUEffectView_UIView *uiFreshlyLoadedView;
+    IBOutlet CsoundAUView *uiFreshlyLoadedView;
 }
 - (NSString *) description;
 

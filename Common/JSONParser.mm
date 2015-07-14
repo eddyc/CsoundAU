@@ -132,7 +132,7 @@ map<string, string> parseConfiguration(string bundleID)
     NSArray *configurationArray = [[NSArray alloc]
                                    initWithObjects:
                                    allKeys[@"ViewBundleID"],
-                                   allKeys[@"ViewFactoryClass"],
+                                   allKeys[@"NibName"],
                                    allKeys[@"csd"],
                                    nil];
     
@@ -143,10 +143,10 @@ map<string, string> parseConfiguration(string bundleID)
     }
     
     string viewBundleID = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
-    string viewFactoryClass = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
+    string nibName = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
     string csdName = [configurationArray[2] cStringUsingEncoding:NSUTF8StringEncoding];
     configuration["ViewBundleID"] = viewBundleID;
-    configuration["ViewFactoryClass"] = viewFactoryClass;
+    configuration["NibName"] = nibName;
     configuration["csd"] = csdName;
     return configuration;
 }

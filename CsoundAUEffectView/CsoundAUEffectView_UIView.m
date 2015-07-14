@@ -31,10 +31,8 @@
 
 @implementation CsoundAUEffectView_UIView
 
-- (void)setAU:(AudioUnit)inAU
+- (void)registerParameters
 {
-    [super setAU:inAU];
-    
     [self setParameter:@"Frequency" forOutlet:frequencySlider];
     [self setParameter:@"Depth" forOutlet:depthSlider];
 }

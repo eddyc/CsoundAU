@@ -19,13 +19,13 @@
  *
  */
 
-
 #ifndef CsoundAU_CsoundObject_h
 #define CsoundAU_CsoundObject_h
 
 #include "AUInstrumentBase.h"
 #include "CsoundAUBase.h"
 #include <CsoundLib64/csound.h>
+
 
 #define kCsoundAudioUnitVersion 0x00010000
 

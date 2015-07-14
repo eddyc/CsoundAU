@@ -25,5 +25,4 @@
 #import "CsoundAUView.h"
 
 @interface CsoundAUEffectView_UIView : CsoundAUView
-- (void)setAU:(AudioUnit)inAU;
 @end

@@ -19,10 +19,9 @@
  *
  */
 
-#import "CsoundAUEffectView_ViewFactory.h"
-#import "CsoundAUEffectView_UIView.h"
+#import "CsoundAUViewFactory.h"
 
-@implementation CsoundAUEffectView_ViewFactory
+@implementation CsoundAUViewFactory
 
 - (unsigned)interfaceVersion
 {
@@ -31,13 +30,13 @@
 
 - (NSString *)description
 {
-	return @"Csound AU Effect";
+	return @"Csound AU";
 }
 
 - (NSView *)uiViewForAudioUnit:(AudioUnit)inAU withSize:(NSSize)inPreferredSize
 {
 
-    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:@"CsoundAUEffectView"
+    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:uiFreshlyLoadedView.nibName
                                                         owner:self
                                               topLevelObjects:nil]) {
         NSLog (@"Unable to load nib for view.");

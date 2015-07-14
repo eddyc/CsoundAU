@@ -27,7 +27,6 @@ CsoundAUBase::CsoundAUBase(AUBase *parent)
     map<string, string> configuration = parseConfiguration(BUNDLEID);
     bundleID = CFStringCreateWithCString(kCFAllocatorDefault, BUNDLEID, kCFStringEncodingASCII);
     guiBundleID = CFStringCreateWithCString(kCFAllocatorDefault, configuration["ViewBundleID"].c_str(), kCFStringEncodingASCII);
-    viewFactoryClass = CFStringCreateWithCString(kCFAllocatorDefault, configuration["ViewFactoryClass"].c_str(), kCFStringEncodingASCII);
     string csdName = configuration["csd"].c_str();
     
     this->parent = parent;
@@ -210,8 +209,7 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                 
                 if (bundleURL == NULL) return fnfErr;
                 
-                CFStringRef className = CFStringCreateCopy(NULL, viewFactoryClass);
-                AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {className}};
+                AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {CFSTR("CsoundAUViewFactory")}};
                 *((AudioUnitCocoaViewInfo *)outData) = cocoaInfo;
                 
                 return noErr;
@@ -276,8 +274,7 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                 
                 if (bundleURL == NULL) return fnfErr;
                 
-                CFStringRef className = CFStringCreateCopy(NULL, viewFactoryClass);
-                AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {className}};
+                AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {CFSTR("CsoundAUViewFactory")}};
                 *((AudioUnitCocoaViewInfo *)outData) = cocoaInfo;
                 
                 return noErr;

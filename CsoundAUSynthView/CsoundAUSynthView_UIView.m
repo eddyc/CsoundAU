@@ -30,10 +30,8 @@
 
 @implementation CsoundAUSynthView_UIView
 
-- (void)setAU:(AudioUnit)inAU
+- (void)registerParameters
 {
-    [super setAU:inAU];
-    
     [self setParameter:@"Frequency" forOutlet:frequencySlider];
 }
 @end

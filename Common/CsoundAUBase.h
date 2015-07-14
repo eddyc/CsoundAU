@@ -103,9 +103,6 @@ public:
     CSOUND *csound;
     CFStringRef bundleID;
     CFStringRef guiBundleID;
-    CFStringRef viewFactoryClass;
-    
-    
     
     void SetParameters(vector<Parameter> parameters);
     AUBase *parent;

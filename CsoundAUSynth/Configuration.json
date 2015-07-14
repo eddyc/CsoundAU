@@ -1,5 +1,5 @@
 {
     "ViewBundleID":"CsoundAUSynthView",
-    "ViewFactoryClass":"CsoundAUSynthView_ViewFactory",
+    "NibName":"CsoundAUSynthView",
     "csd":"Test_CsoundAUSynth"
 }

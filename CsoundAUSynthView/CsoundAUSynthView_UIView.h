@@ -27,6 +27,4 @@
 
 @interface CsoundAUSynthView_UIView : CsoundAUView
 
-- (void)setAU:(AudioUnit)inAU;
-
 @end
