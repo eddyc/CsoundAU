@@ -3,7 +3,12 @@
         "name":"Stuff",
         "preset":{
                     "Frequency":100,
-                    "Depth":11
+                 }
+    },
+    {
+        "name":"Things",
+        "preset":{
+                    "Frequency":10,
                  }
     }
 ]

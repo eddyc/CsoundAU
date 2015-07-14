@@ -137,24 +137,31 @@ void CsoundAUBase::SetPresets(vector<pair<string, Preset>> presetsIn)
     p.presetNumber = 0;
     p.presetName = CFStringCreateWithCString(kCFAllocatorDefault, presetName, kCFStringEncodingASCII);
     parent->SetAFactoryPresetAsCurrent(p);
+    
+    
+    for (size_t i = 0; i < presets.size(); ++i) {
+        
+        AUPreset preset = {0};
+        preset.presetNumber = (UInt32)i;
+        preset.presetName = CFStringCreateWithCString(kCFAllocatorDefault, presets[i].first.c_str(), kCFStringEncodingASCII);
+        auPresetMenuEntries.push_back(preset);
+    }
+
 }
 
 ComponentResult CsoundAUBase::GetPresets (CFArrayRef	*outData) const
 {
     if (outData == NULL) return noErr;
     
-    CFMutableArrayRef presetsArray = CFArrayCreateMutable (NULL, presets.size(), NULL);
-    
-    for (int i = 0; i < presets.size(); ++i) {
+    CFMutableArrayRef presetsArray = CFArrayCreateMutable (NULL,
+                                                           auPresetMenuEntries.size(),
+                                                           NULL);
+    for (int i = 0; i < auPresetMenuEntries.size(); ++i) {
         
-        const char *presetName = (char *)presets[i].first.c_str();
-        AUPreset preset = {0};
-        preset.presetNumber = i;
-        preset.presetName = CFStringCreateWithCString(kCFAllocatorDefault, presetName, kCFStringEncodingASCII);
-        CFArrayAppendValue (presetsArray, &preset);
+        CFArrayAppendValue (presetsArray, &auPresetMenuEntries[i]);
     }
     
-    *outData = (CFArrayRef) presetsArray;
+    *outData = (CFArrayRef)presetsArray;
     return noErr;
 }
 

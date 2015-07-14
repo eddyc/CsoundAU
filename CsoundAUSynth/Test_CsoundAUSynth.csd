@@ -12,7 +12,7 @@ instr 1
 kFrequency chnget "Frequency"
 iCps    cpsmidi   ;get the frequency from the key pressed
 iAmp    ampmidi   0dbfs * 0.3 ;get the amplitude
-aOut    poscil    iAmp, iCps + kFrequency * 10, giSine ;generate a sine tone
+aOut vco2 iAmp, iCps + kFrequency
 outs      aOut, aOut ;write it to the output
 endin
 

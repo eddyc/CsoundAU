@@ -19,14 +19,13 @@
  *
  */
 
-#import "CsoundAUEffectView_UIView.h"
+#import "CsoundAUView.h"
 
-@interface CsoundAUEffectView_UIView ()
+@interface CsoundAUEffectView_UIView : CsoundAUView
 {
     __weak IBOutlet NSSlider *frequencySlider;
     __weak IBOutlet NSSlider *depthSlider;
 }
-
 @end
 
 @implementation CsoundAUEffectView_UIView

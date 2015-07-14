@@ -247,11 +247,9 @@
 		44D3DF2F1B501E0D005B28A3 /* Test_CsoundAUSynth.csd */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test_CsoundAUSynth.csd; sourceTree = "<group>"; };
 		44D3DF301B501E1E005B28A3 /* Test_CsoundAUEffect.csd */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test_CsoundAUEffect.csd; sourceTree = "<group>"; };
 		44D3DF341B501E98005B28A3 /* CsoundAUEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CsoundAUEffectView.xib; sourceTree = "<group>"; };
-		44D3DF351B501E98005B28A3 /* CsoundAUEffectView_UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUEffectView_UIView.h; sourceTree = "<group>"; };
 		44D3DF361B501E98005B28A3 /* CsoundAUEffectView_UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CsoundAUEffectView_UIView.m; sourceTree = "<group>"; };
 		44D3DF391B501E98005B28A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D3DF3F1B501EA4005B28A3 /* CsoundAUSynthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CsoundAUSynthView.xib; sourceTree = "<group>"; };
-		44D3DF401B501EA4005B28A3 /* CsoundAUSynthView_UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUSynthView_UIView.h; sourceTree = "<group>"; };
 		44D3DF411B501EA4005B28A3 /* CsoundAUSynthView_UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CsoundAUSynthView_UIView.m; sourceTree = "<group>"; };
 		44D3DF441B501EA4005B28A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D89F861B53C18E006259EE /* Parameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parameter.h; sourceTree = "<group>"; };
@@ -516,7 +514,6 @@
 			isa = PBXGroup;
 			children = (
 				44D3DF341B501E98005B28A3 /* CsoundAUEffectView.xib */,
-				44D3DF351B501E98005B28A3 /* CsoundAUEffectView_UIView.h */,
 				44D3DF361B501E98005B28A3 /* CsoundAUEffectView_UIView.m */,
 				44D3DF391B501E98005B28A3 /* Info.plist */,
 			);
@@ -527,7 +524,6 @@
 			isa = PBXGroup;
 			children = (
 				44D3DF3F1B501EA4005B28A3 /* CsoundAUSynthView.xib */,
-				44D3DF401B501EA4005B28A3 /* CsoundAUSynthView_UIView.h */,
 				44D3DF411B501EA4005B28A3 /* CsoundAUSynthView_UIView.m */,
 				44D3DF441B501EA4005B28A3 /* Info.plist */,
 			);

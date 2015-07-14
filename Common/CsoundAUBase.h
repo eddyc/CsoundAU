@@ -29,6 +29,7 @@ typedef map<string, Float32> Preset;
 class CsoundAUEffect;
 class CsoundAUSynth;
 class AUEffectBase;
+
 class CsoundAUBase {
     
 public:
@@ -104,6 +105,7 @@ public:
     CFStringRef bundleID;
     CFStringRef guiBundleID;
     
+    vector<AUPreset> auPresetMenuEntries;
     void SetParameters(vector<Parameter> parameters);
     AUBase *parent;
     Preset defaultPreset;
