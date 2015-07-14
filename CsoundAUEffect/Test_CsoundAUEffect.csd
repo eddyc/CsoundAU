@@ -9,6 +9,7 @@ nchnls = 2
 ksmps = 64
 sr = 44100
 
+schedule 1, 0, -1
 
 instr 1
 
@@ -37,11 +38,5 @@ aOutputR = (aLFO * aInputR * kDepth) + (aInputR * (1 - kDepth))
 outs aOutputL, aOutputR
 endin
 
-
-
 </CsInstruments>
-<CsScore>
-i1 0 10000
-
-</CsScore>
 </CsoundSynthesizer>
