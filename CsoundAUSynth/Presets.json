@@ -1,14 +1,9 @@
 [
     {
-        "name":"Stuff",
+        "name":"Slow Attack Long Release",
         "preset":{
-                    "Frequency":100,
-                 }
-    },
-    {
-        "name":"Things",
-        "preset":{
-                    "Frequency":10,
+                    "Attack":0.9,
+                    "Release":0.5
                  }
     }
 ]

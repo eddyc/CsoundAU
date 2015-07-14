@@ -23,7 +23,8 @@
 
 @interface CsoundAUSynthView_UIView : CsoundAUView
 {
-    __weak IBOutlet NSSlider *frequencySlider;
+    __weak IBOutlet NSSlider *release;
+    __weak IBOutlet NSSlider *attack;
 }
 @end
 
@@ -31,6 +32,7 @@
 
 - (void)registerParameters
 {
-    [self setParameter:@"Frequency" forOutlet:frequencySlider];
+    [self setParameter:@"Attack" forOutlet:attack];
+    [self setParameter:@"Release" forOutlet:release];
 }
 @end

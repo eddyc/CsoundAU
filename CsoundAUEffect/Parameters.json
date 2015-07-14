@@ -1,25 +1,23 @@
 [
     {
-        "name":"Frequency",
-        "minValue": 0.5,
-        "maxValue": 200,
-        "defaultValue":2.0,
-        "unit":8,
-        "flag":4194304
-    },
-    {
-        "name":"Depth",
+        "name":"Time",
         "minValue": 0,
-        "maxValue": 100,
-        "defaultValue":50,
-        "unit":3,
+        "maxValue": 10,
+        "defaultValue":5.0,
+        "unit":8
     },
     {
-        "name":"Waveform",
-        "minValue": 1,
-        "maxValue": 2,
-        "defaultValue": 1,
-        "unit":1,
-        "strings":["Sine", "Saw"]
+        "name":"Feedback",
+        "minValue": 0,
+        "maxValue": 0.999,
+        "defaultValue":0.5,
+        "unit":3
+    },
+    {
+        "name":"Mix",
+        "minValue": 0,
+        "maxValue": 1,
+        "defaultValue":0.5,
+        "unit":3
     }
 ]

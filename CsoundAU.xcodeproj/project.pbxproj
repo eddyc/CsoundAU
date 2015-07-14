@@ -503,8 +503,8 @@
 				44D3DF2F1B501E0D005B28A3 /* Test_CsoundAUSynth.csd */,
 				44D3DF261B501CA2005B28A3 /* Info.plist */,
 				44E84F961B52DFAD00E8F617 /* Parameters.json */,
-				449FE63B1B5315FD00424527 /* Configuration.json */,
 				449FE63D1B5316B500424527 /* Presets.json */,
+				449FE63B1B5315FD00424527 /* Configuration.json */,
 				44D3DF3E1B501EA4005B28A3 /* CsoundAUSynthView */,
 			);
 			path = CsoundAUSynth;

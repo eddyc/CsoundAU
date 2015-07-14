@@ -2,8 +2,9 @@
     {
         "name":"Stuff",
         "preset":{
-                    "Frequency":100,
-                    "Depth":11
+                    "Time":0.1,
+                    "Feedback":0.1,
+                    "Mix":0.5
                  }
     }
 ]

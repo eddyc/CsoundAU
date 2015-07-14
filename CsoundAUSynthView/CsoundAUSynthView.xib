@@ -15,13 +15,25 @@
             <rect key="frame" x="0.0" y="1" width="132" height="268"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-xb-XXQ" userLabel="Frequency Slider">
-                    <rect key="frame" x="54" y="63" width="20" height="162"/>
-                    <sliderCell key="cell" continuous="YES" alignment="left" minValue="0.5" maxValue="200" doubleValue="2" tickMarkPosition="right" sliderType="linear" id="0hd-Ul-kp0"/>
+                <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-xb-XXQ" userLabel="Attack Slider">
+                    <rect key="frame" x="30" y="63" width="20" height="162"/>
+                    <sliderCell key="cell" continuous="YES" alignment="left" minValue="1.0000000000000001e-05" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="0hd-Ul-kp0"/>
                 </slider>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbY-PP-X7X" userLabel="Frequency Label">
-                    <rect key="frame" x="30" y="27" width="69" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Frequency" id="KGN-Kj-Xi1">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbY-PP-X7X" userLabel="Attack Label">
+                    <rect key="frame" x="18" y="25" width="44" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Attack" id="KGN-Kj-Xi1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-hy-yyu">
+                    <rect key="frame" x="93" y="63" width="20" height="162"/>
+                    <sliderCell key="cell" continuous="YES" alignment="left" minValue="1.0000000000000001e-05" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="bdN-o0-Xc7"/>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fa-8f-Xq0">
+                    <rect key="frame" x="77" y="25" width="53" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Release" id="qmD-nz-imF">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -29,9 +41,10 @@
                 </textField>
             </subviews>
             <connections>
-                <outlet property="frequencySlider" destination="JL8-xb-XXQ" id="UbF-FC-T07"/>
+                <outlet property="attack" destination="JL8-xb-XXQ" id="yj8-tA-p7z"/>
+                <outlet property="release" destination="SOS-hy-yyu" id="uuV-oT-Kc0"/>
             </connections>
-            <point key="canvasLocation" x="-286" y="331"/>
+            <point key="canvasLocation" x="-1263" y="227"/>
         </customView>
     </objects>
 </document>

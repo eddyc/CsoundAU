@@ -8,12 +8,20 @@ nchnls = 2
 ksmps = 64
 sr = 44100
 
+massign 1,1
+
 instr 1
-kFrequency chnget "Frequency"
-iCps    cpsmidi   ;get the frequency from the key pressed
-iAmp    ampmidi   0dbfs * 0.3 ;get the amplitude
-aOut vco2 iAmp, iCps + kFrequency
-outs      aOut, aOut ;write it to the output
+
+iCps    cpsmidi
+iAmp    ampmidi   0dbfs * 0.3
+iAttack chnget "Attack"
+iRelease chnget "Release"
+
+aOut vco2 iAmp, iCps
+aADSR madsr iAttack, 0, 1, iRelease
+aOut = aOut * aADSR
+
+outs      aOut, aOut
 endin
 
 </CsInstruments>

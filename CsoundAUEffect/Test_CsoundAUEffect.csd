@@ -11,29 +11,26 @@ sr = 44100
 
 schedule 1, 0, -1
 
+
+opcode Delay, a, aikkk
+
+    aInput, iMaxDelayTime, kDelayTime, kFeedback, kMix xin
+    aDelayOut delayr	 iMaxDelayTime
+    aDelayTap deltapi kDelayTime
+    delayw	aInput + aDelayTap * kFeedback
+    xout aDelayTap * (1 - kMix) + aInput * kMix
+endop
+
 instr 1
 
-kFrequency chnget "Frequency"
-kDepth chnget "Depth"
-kWaveform chnget "Waveform"
+kTime chnget "Time"
+kFeedback chnget "Feedback"
+kMix chnget "Mix"
 
 aInputL, aInputR ins
-aLFOSin lfo 1, kFrequency, 1
-aLFOSaw lfo 1, kFrequency, 4
 
-if kWaveform == 1 then
-
-aLFO = aLFOSin
-
-else
-
-aLFO = aLFOSaw
-
-endif
-
-kDepth =  kDepth / 100
-aOutputL = (aLFO * aInputL * kDepth) + (aInputL * (1 - kDepth))
-aOutputR = (aLFO * aInputR * kDepth) + (aInputR * (1 - kDepth))
+aOutputL Delay aInputL, 10, kTime, kFeedback, kMix
+aOutputR Delay aInputR, 10, kTime, kFeedback, kMix
 
 outs aOutputL, aOutputR
 endin

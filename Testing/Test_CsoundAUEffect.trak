@@ -63,70 +63,72 @@
 					<key>file-references</key>
 					<dict>
 						<key>File 1</key>
-						<string>/Volumes/Data/Dropbox/Programming/CsoundAU/Testing/input.wav</string>
+						<string>/Volumes/Data/Dropbox/Programming/SoftwareProjects/CsoundAU/Testing/input.wav</string>
 					</dict>
 					<key>file-secure-references</key>
 					<dict>
 						<key>File 1</key>
 						<data>
-						Ym9vaxwEAAAAAAQQMAAAAHyu4S6f
-						LB7pCR0P1S5EYX7aIuDYK+jkGoL3
-						6nyEGLOgPAMAAAQAAAADAwAAAAgA
+						Ym9va1AEAAAAAAQQMAAAAJMCgJB5
+						19Hc7LDYRLcFpOg0iLur2cQMYQ7E
+						o+jX+b7XcAMAAAQAAAADAwAAAAgA
 						KAcAAAABAQAAVm9sdW1lcwAEAAAA
 						AQEAAERhdGEHAAAAAQEAAERyb3Bi
 						b3gACwAAAAEBAABQcm9ncmFtbWlu
-						ZwAIAAAAAQEAAENzb3VuZEFVBwAA
-						AAEBAABUZXN0aW5nAAkAAAABAQAA
-						aW5wdXQud2F2AAAAHAAAAAEGAAAQ
-						AAAAIAAAACwAAAA8AAAAUAAAAGAA
-						AABwAAAACAAAAAQDAACiNwAAAAAA
-						AAgAAAAEAwAAAgAAAAAAAAAIAAAA
-						BAMAAGcAAAAAAAAACAAAAAQDAABR
-						EQMAAAAAAAgAAAAEAwAAI2ATAAAA
-						AAAIAAAABAMAABdjEwAAAAAACAAA
-						AAQDAAAVthMAAAAAABwAAAABBgAA
-						qAAAALgAAADIAAAA2AAAAOgAAAD4
-						AAAACAEAAAgAAAAABAAAQbqTmWIA
-						AAAYAAAAAQIAAAEAAAAAAAAADwAA
-						AAAAAAAAAAAAAAAAABUAAAABCQAA
-						ZmlsZTovLy9Wb2x1bWVzL0RhdGEv
-						AAAACAAAAAQDAAAAkAz+IgAAAAgA
-						AAAABAAAQbqTWKgAAAAkAAAAAQEA
-						ADBFNzlEQTk4LTIyN0YtM0VCNy1B
-						RkVGLTlCNTlDMkEwMTJBQhgAAAAB
-						AgAAgQAAAAEACADvFwAAAQAIAAAA
-						AAAAAAAADQAAAAEBAAAvVm9sdW1l
-						cy9EYXRhAAAACAAAAAEJAABmaWxl
-						Oi8vLwgAAAABAQAATWFjIE9TIFgI
-						AAAABAMAAADQOVYXAAAACAAAAAAE
-						AABBupNX6QAAACQAAAABAQAAMzg2
-						M0VFRkEtRThGNi0zRjIxLTk4QTgt
-						RDc3NzlGNjYxNTBEAQAAAAEBAAAv
-						AAAAYAAAAP7///8A8AAAAAAAAAcA
-						AAACIAAAfAIAAAAAAAAFIAAAEAIA
-						AAAAAAAQIAAAIAIAAAAAAAARIAAA
-						UAIAAAAAAAASIAAAMAIAAAAAAAAT
-						IAAAQAIAAAAAAAAgIAAA2AEAAAAA
-						AAAEAAAAAwMAAADwAAAEAAAAAwMA
-						AAAAAAAEAAAAAwMAAAEAAAAgAAAA
-						AQYAAPACAAD8AgAACAMAAPwCAAD8
-						AgAA/AIAAPwCAAD8AgAAqAAAAP7/
-						//8BAAAAiAIAAA0AAAAEEAAAhAAA
-						AAAAAAAFEAAAGAEAAAAAAAAQEAAA
-						TAEAAAAAAABAEAAAPAEAAAAAAAAA
-						IAAAFAMAAAAAAAACIAAA+AEAAAAA
-						AAAFIAAAbAEAAAAAAAAQIAAAIAAA
-						AAAAAAARIAAArAEAAAAAAAASIAAA
-						jAEAAAAAAAATIAAAnAEAAAAAAAAg
-						IAAA2AEAAAAAAAAQ0AAABAAAAAAA
-						AAA=
+						ZwAQAAAAAQEAAFNvZnR3YXJlUHJv
+						amVjdHMIAAAAAQEAAENzb3VuZEFV
+						BwAAAAEBAABUZXN0aW5nAAkAAAAB
+						AQAAaW5wdXQud2F2AAAAIAAAAAEG
+						AAAQAAAAIAAAACwAAAA8AAAAUAAA
+						AGgAAAB4AAAAiAAAAAgAAAAEAwAA
+						ojcAAAAAAAAIAAAABAMAAAIAAAAA
+						AAAACAAAAAQDAABnAAAAAAAAAAgA
+						AAAEAwAAUREDAAAAAAAIAAAABAMA
+						AOe+AwAAAAAACAAAAAQDAAAjYBMA
+						AAAAAAgAAAAEAwAAF2MTAAAAAAAI
+						AAAABAMAABW2EwAAAAAAIAAAAAEG
+						AADEAAAA1AAAAOQAAAD0AAAABAEA
+						ABQBAAAkAQAANAEAAAgAAAAABAAA
+						QbqTmWIAAAAYAAAAAQIAAAEAAAAA
+						AAAADwAAAAAAAAAAAAAAAAAAABUA
+						AAABCQAAZmlsZTovLy9Wb2x1bWVz
+						L0RhdGEvAAAACAAAAAQDAAAAkAz+
+						IgAAAAgAAAAABAAAQbqTWKgAAAAk
+						AAAAAQEAADBFNzlEQTk4LTIyN0Yt
+						M0VCNy1BRkVGLTlCNTlDMkEwMTJB
+						QhgAAAABAgAAgQAAAAEACADvFwAA
+						AQAIAAAAAAAAAAAADQAAAAEBAAAv
+						Vm9sdW1lcy9EYXRhAAAACAAAAAEJ
+						AABmaWxlOi8vLwgAAAABAQAATWFj
+						IE9TIFgIAAAABAMAAADQOVYXAAAA
+						CAAAAAAEAABBupNX6QAAACQAAAAB
+						AQAAMzg2M0VFRkEtRThGNi0zRjIx
+						LTk4QTgtRDc3NzlGNjYxNTBEAQAA
+						AAEBAAAvAAAAYAAAAP7///8A8AAA
+						AAAAAAcAAAACIAAArAIAAAAAAAAF
+						IAAAQAIAAAAAAAAQIAAAUAIAAAAA
+						AAARIAAAgAIAAAAAAAASIAAAYAIA
+						AAAAAAATIAAAcAIAAAAAAAAgIAAA
+						CAIAAAAAAAAEAAAAAwMAAADwAAAE
+						AAAAAwMAAAAAAAAEAAAAAwMAAAEA
+						AAAkAAAAAQYAACADAAAsAwAAOAMA
+						ACwDAAAsAwAALAMAACwDAAAsAwAA
+						LAMAAKgAAAD+////AQAAALgCAAAN
+						AAAABBAAAJwAAAAAAAAABRAAAEQB
+						AAAAAAAAEBAAAHwBAAAAAAAAQBAA
+						AGwBAAAAAAAAACAAAEQDAAAAAAAA
+						AiAAACgCAAAAAAAABSAAAJwBAAAA
+						AAAAECAAACAAAAAAAAAAESAAANwB
+						AAAAAAAAEiAAALwBAAAAAAAAEyAA
+						AMwBAAAAAAAAICAAAAgCAAAAAAAA
+						ENAAAAQAAAAAAAAA
 						</data>
 					</dict>
 					<key>kAUPresetPersistentStateKey</key>
 					<array>
 						<dict>
 							<key>FileName</key>
-							<string>/Volumes/Data/Dropbox/Programming/CsoundAU/Testing/input.wav</string>
+							<string>/Volumes/Data/Dropbox/Programming/SoftwareProjects/CsoundAU/Testing/input.wav</string>
 							<key>IsSelectedFile</key>
 							<true/>
 							<key>Regions</key>
@@ -295,14 +297,14 @@
 								<key>data</key>
 								<data>
 								AAAAAAAAAAAA
-								AAADAAAAAEAA
-								AAAAAAABQkgA
-								AAAAAAI/gAAA
+								AAADAAAAAAAA
+								AAAAAAABAAAA
+								AAAAAAI/CXE7
 								</data>
 								<key>manufacturer</key>
 								<integer>1129530968</integer>
 								<key>name</key>
-								<string>Slow &amp; Gentle</string>
+								<string>Stuff</string>
 								<key>subtype</key>
 								<integer>1129530968</integer>
 								<key>type</key>
@@ -469,7 +471,7 @@
 				<key>kAUInspectorStateKey_WindowLevel</key>
 				<integer>9223372036854775807</integer>
 				<key>kAUInspectorStateKey_WindowRect</key>
-				<string>{{482, 263}, {340, 375}}</string>
+				<string>{{395, 474}, {340, 375}}</string>
 			</dict>
 			<dict>
 				<key>kAUInspectorStateKey_BusIndex</key>
@@ -500,7 +502,7 @@
 				<key>kAUInspectorStateKey_WindowLevel</key>
 				<integer>9223372036854775807</integer>
 				<key>kAUInspectorStateKey_WindowRect</key>
-				<string>{{723, 227}, {340, 324}}</string>
+				<string>{{849, 365}, {340, 324}}</string>
 			</dict>
 		</array>
 	</dict>

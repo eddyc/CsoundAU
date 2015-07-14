@@ -52,7 +52,9 @@ CsoundAUBase::CsoundAUBase(AUBase *parent)
     vector<Parameter> parameters = parseParameters(BUNDLEID);
     vector<pair<string, Preset>> presets = parsePresets(BUNDLEID);
     SetParameters(parameters);
-    SetPresets(presets);
+    if (presets.size() > 0) {
+        SetPresets(presets);
+    }
 }
 
 

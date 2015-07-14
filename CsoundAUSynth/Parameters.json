@@ -1,10 +1,14 @@
 [
     {
-        "name":"Frequency",
-        "minValue": 0.5,
-        "maxValue": 200,
-        "defaultValue":2.0,
-        "unit":8,
-        "flag":4194304
+        "name":"Attack",
+        "minValue": 0.00001,
+        "maxValue": 1,
+        "defaultValue":0.5
+    },
+    {
+        "name":"Release",
+        "minValue": 0.00001,
+        "maxValue": 1,
+        "defaultValue":0.5
     }
 ]

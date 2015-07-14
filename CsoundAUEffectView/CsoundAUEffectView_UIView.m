@@ -23,8 +23,9 @@
 
 @interface CsoundAUEffectView_UIView : CsoundAUView
 {
-    __weak IBOutlet NSSlider *frequencySlider;
-    __weak IBOutlet NSSlider *depthSlider;
+    __weak IBOutlet NSSlider *mix;
+    __weak IBOutlet NSSlider *time;
+    __weak IBOutlet NSSlider *feedback;
 }
 @end
 
@@ -32,8 +33,9 @@
 
 - (void)registerParameters
 {
-    [self setParameter:@"Frequency" forOutlet:frequencySlider];
-    [self setParameter:@"Depth" forOutlet:depthSlider];
+    [self setParameter:@"Time" forOutlet:time];
+    [self setParameter:@"Feedback" forOutlet:feedback];
+    [self setParameter:@"Mix" forOutlet:mix];
 }
 
 
