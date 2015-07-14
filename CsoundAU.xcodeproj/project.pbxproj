@@ -80,16 +80,12 @@
 		44D3DF1E1B501C86005B28A3 /* CAVectorUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DED81B501C86005B28A3 /* CAVectorUnit.cpp */; };
 		44D3DF1F1B501C86005B28A3 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEDB1B501C86005B28A3 /* CAXException.cpp */; };
 		44D3DF201B501C86005B28A3 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEDB1B501C86005B28A3 /* CAXException.cpp */; };
-		44D3DF2A1B501CA2005B28A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF231B501CA2005B28A3 /* Info.plist */; };
-		44D3DF2D1B501CA2005B28A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF261B501CA2005B28A3 /* Info.plist */; };
 		44D3DF311B501E4A005B28A3 /* Test_CsoundAUSynth.csd in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF2F1B501E0D005B28A3 /* Test_CsoundAUSynth.csd */; };
 		44D3DF321B501E55005B28A3 /* Test_CsoundAUEffect.csd in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF301B501E1E005B28A3 /* Test_CsoundAUEffect.csd */; };
 		44D3DF3A1B501E98005B28A3 /* CsoundAUEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF341B501E98005B28A3 /* CsoundAUEffectView.xib */; };
 		44D3DF3B1B501E98005B28A3 /* CsoundAUEffectView_UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DF361B501E98005B28A3 /* CsoundAUEffectView_UIView.m */; };
-		44D3DF3D1B501E98005B28A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF391B501E98005B28A3 /* Info.plist */; };
 		44D3DF451B501EA4005B28A3 /* CsoundAUSynthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF3F1B501EA4005B28A3 /* CsoundAUSynthView.xib */; };
 		44D3DF461B501EA4005B28A3 /* CsoundAUSynthView_UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DF411B501EA4005B28A3 /* CsoundAUSynthView_UIView.m */; };
-		44D3DF481B501EA4005B28A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF441B501EA4005B28A3 /* Info.plist */; };
 		44D5AF551B4C4A5000F031F9 /* CsoundAUEffectView.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44AB3B401B4C3484003749EA /* CsoundAUEffectView.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44D89F891B53C54D006259EE /* Parameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F881B53C54D006259EE /* Parameter.cpp */; };
 		44D89F8A1B53C54D006259EE /* Parameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F881B53C54D006259EE /* Parameter.cpp */; };
@@ -661,7 +657,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D3DF311B501E4A005B28A3 /* Test_CsoundAUSynth.csd in Resources */,
-				44D3DF2D1B501CA2005B28A3 /* Info.plist in Resources */,
 				449FE63C1B5315FD00424527 /* Configuration.json in Resources */,
 				449FE63E1B5316B500424527 /* Presets.json in Resources */,
 				44E84F981B52E2DF00E8F617 /* Parameters.json in Resources */,
@@ -674,7 +669,6 @@
 			files = (
 				44E84F9D1B53004400E8F617 /* Configuration.json in Resources */,
 				44D3DF321B501E55005B28A3 /* Test_CsoundAUEffect.csd in Resources */,
-				44D3DF2A1B501CA2005B28A3 /* Info.plist in Resources */,
 				447B8B4D1B52A87300B44D64 /* Parameters.json in Resources */,
 				44E84F9B1B52F14E00E8F617 /* Presets.json in Resources */,
 			);
@@ -684,7 +678,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D3DF481B501EA4005B28A3 /* Info.plist in Resources */,
 				44D3DF451B501EA4005B28A3 /* CsoundAUSynthView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,7 +686,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D3DF3D1B501E98005B28A3 /* Info.plist in Resources */,
 				44D3DF3A1B501E98005B28A3 /* CsoundAUEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -967,7 +959,7 @@
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXPORTED_SYMBOLS_FILE = /Volumes/Data/Dropbox/Programming/CsoundAU/Common/CsoundAU.exp;
+				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/Common/CsoundAU.exp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
@@ -1026,7 +1018,7 @@
 				DSTROOT = /;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXPORTED_SYMBOLS_FILE = /Volumes/Data/Dropbox/Programming/CsoundAU/Common/CsoundAU.exp;
+				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/Common/CsoundAU.exp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
