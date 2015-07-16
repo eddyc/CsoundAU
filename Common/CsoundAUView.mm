@@ -62,15 +62,7 @@ void checkError(OSStatus error)
 
 - (void)setAU:(AudioUnit)inAU
 {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLEID];
-    NSString *bundlePath = [[[[bundle bundlePath]
-                              stringByDeletingLastPathComponent]
-                             stringByDeletingLastPathComponent]
-                            stringByDeletingLastPathComponent];
-    string auBundlePath = [[[NSBundle bundleWithPath:bundlePath] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding];
-    parameters = parseParameters(auBundlePath);
-    configuration = parseConfiguration(auBundlePath);
-    _nibName = [NSString stringWithUTF8String:configuration["NibName"].c_str()];
+    parameters = parseParameters([_auBundlePath cStringUsingEncoding:NSUTF8StringEncoding]);
     registeredParameters = [[NSMutableArray alloc] initWithCapacity:parameters.size()];
     
     for (size_t i = 0; i < parameters.size(); ++i) {

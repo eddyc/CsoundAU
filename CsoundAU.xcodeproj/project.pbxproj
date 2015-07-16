@@ -84,7 +84,6 @@
 		44D3DF321B501E55005B28A3 /* Test_CsoundAUEffect.csd in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF301B501E1E005B28A3 /* Test_CsoundAUEffect.csd */; };
 		44D3DF3A1B501E98005B28A3 /* CsoundAUEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF341B501E98005B28A3 /* CsoundAUEffectView.xib */; };
 		44D3DF3B1B501E98005B28A3 /* CsoundAUEffectView_UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DF361B501E98005B28A3 /* CsoundAUEffectView_UIView.m */; };
-		44D3DF451B501EA4005B28A3 /* CsoundAUSynthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF3F1B501EA4005B28A3 /* CsoundAUSynthView.xib */; };
 		44D3DF461B501EA4005B28A3 /* CsoundAUSynthView_UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DF411B501EA4005B28A3 /* CsoundAUSynthView_UIView.m */; };
 		44D5AF551B4C4A5000F031F9 /* CsoundAUEffectView.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44AB3B401B4C3484003749EA /* CsoundAUEffectView.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44D89F891B53C54D006259EE /* Parameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F881B53C54D006259EE /* Parameter.cpp */; };
@@ -95,8 +94,9 @@
 		44D89F901B53C82B006259EE /* Parameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F881B53C54D006259EE /* Parameter.cpp */; };
 		44D89F931B541135006259EE /* CsoundAUView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F921B541135006259EE /* CsoundAUView.mm */; };
 		44D89F941B541135006259EE /* CsoundAUView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44D89F921B541135006259EE /* CsoundAUView.mm */; };
-		44DD0CBD1B550B2400F34888 /* CsoundAUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.m */; };
-		44DD0CBE1B550B2400F34888 /* CsoundAUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.m */; };
+		44DD0CBD1B550B2400F34888 /* CsoundAUViewFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.mm */; };
+		44DD0CBE1B550B2400F34888 /* CsoundAUViewFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.mm */; };
+		44DEA1211B57BB020067D43E /* CsoundAUSynthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DF3F1B501EA4005B28A3 /* CsoundAUSynthView.xib */; };
 		44E84F931B52D9F800E8F617 /* JSONParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44E84F921B52D9F800E8F617 /* JSONParser.mm */; };
 		44E84F951B52DA1200E8F617 /* JSONParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44E84F921B52D9F800E8F617 /* JSONParser.mm */; };
 		44E84F981B52E2DF00E8F617 /* Parameters.json in Resources */ = {isa = PBXBuildFile; fileRef = 44E84F961B52DFAD00E8F617 /* Parameters.json */; };
@@ -257,7 +257,7 @@
 		44D89F911B541135006259EE /* CsoundAUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUView.h; sourceTree = "<group>"; };
 		44D89F921B541135006259EE /* CsoundAUView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CsoundAUView.mm; sourceTree = "<group>"; };
 		44DD0CBB1B550B2400F34888 /* CsoundAUViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUViewFactory.h; sourceTree = "<group>"; };
-		44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CsoundAUViewFactory.m; sourceTree = "<group>"; };
+		44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CsoundAUViewFactory.mm; sourceTree = "<group>"; };
 		44E84F921B52D9F800E8F617 /* JSONParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSONParser.mm; sourceTree = "<group>"; };
 		44E84F941B52DA0400E8F617 /* JSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
 		44E84F961B52DFAD00E8F617 /* Parameters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parameters.json; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 				44D89F911B541135006259EE /* CsoundAUView.h */,
 				44D89F921B541135006259EE /* CsoundAUView.mm */,
 				44DD0CBB1B550B2400F34888 /* CsoundAUViewFactory.h */,
-				44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.m */,
+				44DD0CBC1B550B2400F34888 /* CsoundAUViewFactory.mm */,
 				44E84F921B52D9F800E8F617 /* JSONParser.mm */,
 				44E84F941B52DA0400E8F617 /* JSONParser.h */,
 				44D89F861B53C18E006259EE /* Parameter.h */,
@@ -674,7 +674,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D3DF451B501EA4005B28A3 /* CsoundAUSynthView.xib in Resources */,
+				44DEA1211B57BB020067D43E /* CsoundAUSynthView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D89F931B541135006259EE /* CsoundAUView.mm in Sources */,
-				44DD0CBD1B550B2400F34888 /* CsoundAUViewFactory.m in Sources */,
+				44DD0CBD1B550B2400F34888 /* CsoundAUViewFactory.mm in Sources */,
 				44D3DF461B501EA4005B28A3 /* CsoundAUSynthView_UIView.m in Sources */,
 				44D89F8C1B53C5D2006259EE /* Parameter.cpp in Sources */,
 				44D89F8E1B53C81C006259EE /* JSONParser.mm in Sources */,
@@ -788,7 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D89F941B541135006259EE /* CsoundAUView.mm in Sources */,
-				44DD0CBE1B550B2400F34888 /* CsoundAUViewFactory.m in Sources */,
+				44DD0CBE1B550B2400F34888 /* CsoundAUViewFactory.mm in Sources */,
 				44D3DF3B1B501E98005B28A3 /* CsoundAUEffectView_UIView.m in Sources */,
 				44D89F901B53C82B006259EE /* Parameter.cpp in Sources */,
 				44D89F8F1B53C823006259EE /* JSONParser.mm in Sources */,

@@ -23,13 +23,12 @@
 #import <Cocoa/Cocoa.h>
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
-
 @interface CsoundAUView : NSView
 {
     AudioUnit mAU;
     AUEventListenerRef mAUEventListener;
 }
-@property NSString *nibName;
+@property NSString *auBundlePath;
 - (void)setAU:(AudioUnit)inAU;
 - (void)setParameter:(NSString *)parameterName forOutlet:(NSControl *)outlet;
 - (void)registerParameters;

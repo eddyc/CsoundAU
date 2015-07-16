@@ -20,6 +20,7 @@
  */
 
 #import "CsoundAUViewFactory.h"
+#import "JSONParser.h"
 
 @implementation CsoundAUViewFactory
 
@@ -35,14 +36,23 @@
 
 - (NSView *)uiViewForAudioUnit:(AudioUnit)inAU withSize:(NSSize)inPreferredSize
 {
-
-    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:uiFreshlyLoadedView.nibName
+    
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLEID];
+    NSString *bundlePath = [[[[bundle bundlePath]
+                              stringByDeletingLastPathComponent]
+                             stringByDeletingLastPathComponent]
+                            stringByDeletingLastPathComponent];
+    string auBundlePath = [[[NSBundle bundleWithPath:bundlePath] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding];
+    map<string, string> configuration = parseConfiguration(auBundlePath);
+    NSString *nibName = [NSString stringWithUTF8String:configuration["NibName"].c_str()];
+    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:nibName
                                                         owner:self
                                               topLevelObjects:nil]) {
         NSLog (@"Unable to load nib for view.");
-		return nil;
-	}
+        return nil;
+    }
     
+    uiFreshlyLoadedView.auBundlePath = [NSString stringWithCString:auBundlePath.c_str() encoding:NSUTF8StringEncoding];
     [uiFreshlyLoadedView setAU:inAU];
     
     NSView *returnView = uiFreshlyLoadedView;
