@@ -64,11 +64,10 @@ OSStatus CsoundAUSynth::Render(AudioUnitRenderActionFlags &ioActionFlags,
             AUInstrumentBase::Render(ioActionFlags, inTimeStamp, inNumberFrames);
             AUScope &outputs = Outputs();
             UInt32 numOutputs = outputs.GetNumberOfElements();
-            for (UInt32 j = 0; j < numOutputs; ++j)
-            {
+            for (UInt32 j = 0; j < numOutputs; ++j) {
+                
                 GetOutput(j)->PrepareBuffer(inNumberFrames);	// AUBase::DoRenderBus() only does this for the first output element
                 AudioBufferList& bufferList = GetOutput(j)->GetBufferList();
-                
                 Render(inNumberFrames, &bufferList);
             }
     }
@@ -99,7 +98,7 @@ OSStatus CsoundAUSynth::Render(UInt32 inNumberFrames,
             buffer = (Float32 *) ioData->mBuffers[k].mData;
             
             for (int j = 0; j < ksmps; j++){
-                
+               
                 buffer[j+i*ksmps] = (Float32) spout[j*nchnls+k];
             }
         }

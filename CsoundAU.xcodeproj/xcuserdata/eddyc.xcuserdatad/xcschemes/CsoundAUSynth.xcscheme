@@ -41,7 +41,6 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "com.apple.audio.aulab"
          FilePath = "/Applications/AU Lab.app">
       </PathRunnable>
       <MacroExpansion>

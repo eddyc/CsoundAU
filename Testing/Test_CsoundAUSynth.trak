@@ -72,6 +72,15 @@
 				<integer>1</integer>
 			</array>
 		</dict>
+		<key>midi sources used</key>
+		<array>
+			<dict>
+				<key>midi source uid</key>
+				<integer>391197226</integer>
+				<key>name</key>
+				<string>MidiMock OUT</string>
+			</dict>
+		</array>
 		<key>output stage</key>
 		<dict>
 			<key>au layout tags</key>
@@ -140,7 +149,8 @@
 				<dict>
 					<key>data</key>
 					<data>
-					AAAAAAAAAAAAAAABAAAAAAAAAAA=
+					AAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAA
+					AA==
 					</data>
 					<key>manufacturer</key>
 					<integer>1129535822</integer>
@@ -183,6 +193,8 @@
 				</array>
 				<key>midi</key>
 				<dict>
+					<key>midi source uid</key>
+					<integer>391197226</integer>
 					<key>midi thru connection</key>
 					<dict>
 						<key>midi thru data</key>
@@ -201,10 +213,10 @@
 						AAAAAAAAAAsAAAAAAAAAQAAAAAAA
 						</data>
 						<key>name</key>
-						<string>Untitled</string>
+						<string>Midi Device</string>
 					</dict>
 					<key>name</key>
-					<string>any midi source</string>
+					<string>MidiMock OUT</string>
 				</dict>
 				<key>name</key>
 				<string>Midi Device</string>
@@ -293,16 +305,11 @@
 				<key>kAUInspectorStateKey_Bypassed</key>
 				<false/>
 				<key>kAUInspectorStateKey_CurrentViewName</key>
-				<string>Csound AU</string>
+				<string>MIDI Editor</string>
 				<key>kAUInspectorStateKey_EffectIndex</key>
 				<integer>-1</integer>
 				<key>kAUInspectorStateKey_PresetDrawerExpandedItems</key>
-				<array>
-					<array>
-						<string>Factory</string>
-						<false/>
-					</array>
-				</array>
+				<array/>
 				<key>kAUInspectorStateKey_PresetDrawerShowing</key>
 				<false/>
 				<key>kAUInspectorStateKey_TrackIndex</key>
@@ -310,7 +317,7 @@
 				<key>kAUInspectorStateKey_WindowLevel</key>
 				<integer>9223372036854775807</integer>
 				<key>kAUInspectorStateKey_WindowRect</key>
-				<string>{{482, 263}, {340, 330}}</string>
+				<string>{{482, 263}, {666, 502}}</string>
 			</dict>
 		</array>
 	</dict>

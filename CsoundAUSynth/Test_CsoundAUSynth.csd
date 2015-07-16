@@ -1,6 +1,6 @@
 <CsoundSynthesizer>
 <CsOptions>
--+rtmidi=null -+rtaudio=null -M0
+-+rtmidi=null -+rtaudio=null -M0 -odac
 </CsOptions>
 <CsInstruments>
 nchnls = 2

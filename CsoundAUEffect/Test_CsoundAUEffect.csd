@@ -1,6 +1,6 @@
 <CsoundSynthesizer>
 <CsOptions>
--+rtaudio=null
+-+rtaudio=null -odac
 
 </CsOptions>
 <CsInstruments>
