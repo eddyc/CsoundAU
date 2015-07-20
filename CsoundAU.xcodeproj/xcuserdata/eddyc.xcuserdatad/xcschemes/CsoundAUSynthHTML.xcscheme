@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-               BuildableName = "CsoundAUEffect.component"
-               BlueprintName = "CsoundAUEffect"
+               BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+               BuildableName = "CsoundAUSynthHTML.component"
+               BlueprintName = "CsoundAUSynthHTML"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,15 +46,15 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-            BuildableName = "CsoundAUEffect.component"
-            BlueprintName = "CsoundAUEffect"
+            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+            BuildableName = "CsoundAUSynthHTML.component"
+            BlueprintName = "CsoundAUSynthHTML"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$(SRCROOT)/Testing/Test_CsoundAUEffect.trak"
+            argument = "$(SRCROOT)/Testing/Test_CsoundAUSynth.trak"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -70,9 +70,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-            BuildableName = "CsoundAUEffect.component"
-            BlueprintName = "CsoundAUEffect"
+            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+            BuildableName = "CsoundAUSynthHTML.component"
+            BlueprintName = "CsoundAUSynthHTML"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

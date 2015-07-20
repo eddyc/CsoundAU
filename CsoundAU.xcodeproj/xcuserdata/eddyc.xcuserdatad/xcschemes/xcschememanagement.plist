@@ -4,29 +4,41 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CsoundAUEffect.xcscheme</key>
+		<key>CsoundAUEffectCocoa.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>CsoundAUEffectView.xcscheme</key>
+		<key>CsoundAUEffectCocoaView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>CsoundAUSynthCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>CsoundAUSynthCocoaView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>CsoundAUSynth.xcscheme</key>
+		<key>CsoundAUSynthHTML.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
-		<key>CsoundAUSynthView.xcscheme</key>
+		<key>CsoundAUSynthHTMLView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,6 +59,21 @@
 			<true/>
 		</dict>
 		<key>44AB3B3F1B4C3484003749EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44DDE4081B5C274C0094B673</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44DDE4611B5C2D1D0094B673</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44DDE4A21B5C33880094B673</key>
 		<dict>
 			<key>primary</key>
 			<true/>

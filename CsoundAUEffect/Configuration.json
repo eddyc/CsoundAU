@@ -1,5 +1,5 @@
 {
-    "ViewBundleID":"CsoundAUEffectView",
-    "NibName":"CsoundAUEffectView",
+    "ViewBundleID":"CsoundAUEffectCocoaView",
+    "NibName":"CsoundAUEffectCocoaView",
     "csd":"Test_CsoundAUEffect"
 }

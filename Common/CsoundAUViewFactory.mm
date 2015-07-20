@@ -44,7 +44,23 @@
                             stringByDeletingLastPathComponent];
     string auBundlePath = [[[NSBundle bundleWithPath:bundlePath] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding];
     map<string, string> configuration = parseConfiguration(auBundlePath);
-    NSString *nibName = [NSString stringWithUTF8String:configuration["NibName"].c_str()];
+    
+    if (configuration["NibName"].length() > 0) {
+        
+        return [self loadNib:configuration["NibName"] withBundlePath:auBundlePath forAU:inAU];
+    }
+    else {
+        NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, inPreferredSize.width, inPreferredSize.height)];
+        
+        return view;
+    }
+    
+    return nil;
+}
+
+- (NSView *)loadNib:(string)nibNameString withBundlePath:(string)auBundlePath forAU:(AudioUnit)inAU
+{
+    NSString *nibName = [NSString stringWithUTF8String:nibNameString.c_str()];
     if (![[NSBundle bundleForClass:[self class]] loadNibNamed:nibName
                                                         owner:self
                                               topLevelObjects:nil]) {
@@ -57,7 +73,6 @@
     
     NSView *returnView = uiFreshlyLoadedView;
     uiFreshlyLoadedView = nil;
-    
     return returnView;
 }
 

@@ -61,7 +61,7 @@
 			<key>in channels</key>
 			<integer>0</integer>
 			<key>io num frames</key>
-			<integer>512</integer>
+			<integer>1024</integer>
 			<key>name</key>
 			<string>Built-in Output</string>
 			<key>out channels</key>
@@ -76,7 +76,7 @@
 		<array>
 			<dict>
 				<key>midi source uid</key>
-				<integer>391197226</integer>
+				<integer>-1948951884</integer>
 				<key>name</key>
 				<string>MidiMock OUT</string>
 			</dict>
@@ -194,7 +194,7 @@
 				<key>midi</key>
 				<dict>
 					<key>midi source uid</key>
-					<integer>391197226</integer>
+					<integer>-1948951884</integer>
 					<key>midi thru connection</key>
 					<dict>
 						<key>midi thru data</key>
@@ -305,11 +305,16 @@
 				<key>kAUInspectorStateKey_Bypassed</key>
 				<false/>
 				<key>kAUInspectorStateKey_CurrentViewName</key>
-				<string>MIDI Editor</string>
+				<string>Csound AU</string>
 				<key>kAUInspectorStateKey_EffectIndex</key>
 				<integer>-1</integer>
 				<key>kAUInspectorStateKey_PresetDrawerExpandedItems</key>
-				<array/>
+				<array>
+					<array>
+						<string>Factory</string>
+						<false/>
+					</array>
+				</array>
 				<key>kAUInspectorStateKey_PresetDrawerShowing</key>
 				<false/>
 				<key>kAUInspectorStateKey_TrackIndex</key>
@@ -317,7 +322,7 @@
 				<key>kAUInspectorStateKey_WindowLevel</key>
 				<integer>9223372036854775807</integer>
 				<key>kAUInspectorStateKey_WindowRect</key>
-				<string>{{482, 263}, {666, 502}}</string>
+				<string>{{482, 263}, {340, 330}}</string>
 			</dict>
 		</array>
 	</dict>

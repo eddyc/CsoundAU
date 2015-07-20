@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44AB3B3F1B4C3484003749EA"
-               BuildableName = "CsoundAUEffectView.bundle"
-               BlueprintName = "CsoundAUEffectView"
+               BlueprintIdentifier = "440C9D001B4AB1D700B3E72F"
+               BuildableName = "CsoundAUSynthCocoa.component"
+               BlueprintName = "CsoundAUSynthCocoa"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,15 +39,26 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.audio.aulab"
+         FilePath = "/Applications/AU Lab.app">
+      </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44AB3B3F1B4C3484003749EA"
-            BuildableName = "CsoundAUEffectView.bundle"
-            BlueprintName = "CsoundAUEffectView"
+            BlueprintIdentifier = "440C9D001B4AB1D700B3E72F"
+            BuildableName = "CsoundAUSynthCocoa.component"
+            BlueprintName = "CsoundAUSynthCocoa"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "$(SRCROOT)/Testing/Test_CsoundAUSynth.trak"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,9 +71,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44AB3B3F1B4C3484003749EA"
-            BuildableName = "CsoundAUEffectView.bundle"
-            BlueprintName = "CsoundAUEffectView"
+            BlueprintIdentifier = "440C9D001B4AB1D700B3E72F"
+            BuildableName = "CsoundAUSynthCocoa.component"
+            BlueprintName = "CsoundAUSynthCocoa"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
