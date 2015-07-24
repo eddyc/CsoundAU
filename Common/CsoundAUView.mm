@@ -3,20 +3,6 @@
  *
  * Copyright (C) 2015 Edward Costello
  *
- * This software is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
  */
 
 #import "CsoundAUView.h"
@@ -25,7 +11,7 @@
 void checkError(OSStatus error)
 {
     if (error != noErr) {
-        
+
         printf("Error %d\nExiting\n", error);
         exit(-1);
     }
@@ -48,43 +34,43 @@ void checkError(OSStatus error)
     const char *cString = [parameterName cStringUsingEncoding:NSUTF8StringEncoding];
     outlet.tag = parameterIndices[cString];
     [registeredParameters replaceObjectAtIndex:outlet.tag withObject:outlet];
-    
+
     [outlet setTarget:self];
     [outlet setAction:@selector(valueChanged:)];
     [self priv_synchroniseUIWithParameterValues:(UInt32)outlet.tag];
-    
+
 }
 
 - (void)registerParameters
 {
-    
+
 }
 
 - (void)setAU:(AudioUnit)inAU
 {
     parameters = parseParameters([_auBundlePath cStringUsingEncoding:NSUTF8StringEncoding]);
     registeredParameters = [[NSMutableArray alloc] initWithCapacity:parameters.size()];
-    
+
     for (size_t i = 0; i < parameters.size(); ++i) {
-        
+
         parameterIndices[parameters[i].name] = i;
         [registeredParameters addObject:@false];
     }
-    
+
     if (mAU) {
-        
+
         [self priv_removeListeners];
     }
-    
+
     mAU = inAU;
-    
+
     [self priv_addListeners];
-    
+
     [self registerParameters];
 }
 
 - (void)priv_synchroniseUIWithParameterValues:(UInt32)parameterIndex {
-    
+
     Float32 value;
     NSAssert (AudioUnitGetParameter(mAU, static_cast<AudioUnitParameterID>(parameterIndex), kAudioUnitScope_Global, 0, &value) == noErr,
               @"[CsoundAUView priv_synchronizeUIWithParameterValues] (x.1)");
@@ -106,18 +92,18 @@ void EventListenerDispatcher (void *inRefCon, void *inObject,
 {
     switch (inEvent->mEventType) {
         case kAudioUnitEvent_ParameterValueChange:
-            
+
             UInt32 parameterID = inEvent->mArgument.mParameter.mParameterID;
             NSObject *object = [registeredParameters objectAtIndex:parameterID];
             if ([object isEqualTo:@false]) {
                 return;
             }
             else {
-                
+
                 NSControl *control = (NSControl *)object;
                 [control setFloatValue:inValue];
             }
-            
+
             break;
     }
 }
@@ -125,10 +111,10 @@ void EventListenerDispatcher (void *inRefCon, void *inObject,
 - (void)priv_removeListeners
 {
     if (mAUEventListener) {
-        
+
         checkError(AUListenerDispose(mAUEventListener));
     }
-    
+
     mAUEventListener = NULL;
     mAU = NULL;
 }
@@ -137,10 +123,10 @@ void addParamListener(AUEventListenerRef listener, void *refCon, AudioUnitEvent 
 {
     inEvent->mEventType = kAudioUnitEvent_BeginParameterChangeGesture;
     checkError(AUEventListenerAddEventType(listener, refCon, inEvent));
-    
+
     inEvent->mEventType = kAudioUnitEvent_EndParameterChangeGesture;
     checkError(AUEventListenerAddEventType(listener, refCon, inEvent));
-    
+
     inEvent->mEventType = kAudioUnitEvent_ParameterValueChange;
     checkError(AUEventListenerAddEventType(listener, refCon, inEvent));
 }
@@ -148,7 +134,7 @@ void addParamListener(AUEventListenerRef listener, void *refCon, AudioUnitEvent 
 - (void)priv_addListeners
 {
     if (mAU) {
-        
+
         checkError(AUEventListenerCreate(EventListenerDispatcher,
                                          (__bridge void *)self,
                                          CFRunLoopGetCurrent(),
@@ -156,9 +142,9 @@ void addParamListener(AUEventListenerRef listener, void *refCon, AudioUnitEvent 
                                          0.05,
                                          0.05,
                                          &mAUEventListener));
-        
+
         for (size_t i = 0; i < parameters.size(); ++i) {
-            
+
             AudioUnitEvent auEvent;
             AudioUnitParameter parameter = {mAU, static_cast<AudioUnitParameterID>(i), kAudioUnitScope_Global, 0};
             auEvent.mArgument.mParameter = parameter;
@@ -174,7 +160,7 @@ void addParamListener(AUEventListenerRef listener, void *refCon, AudioUnitEvent 
 - (IBAction)valueChanged:(id)sender {
     float floatValue = [sender floatValue];
     AudioUnitParameter parameter = {mAU, static_cast<AudioUnitParameterID>([sender tag]), kAudioUnitScope_Global, 0 };
-    
+
     NSAssert(AUParameterSet(mAUEventListener,
                             (__bridge void *)sender,
                             &parameter,
