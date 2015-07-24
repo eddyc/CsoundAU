@@ -1,2 +1,4 @@
 *.xcuserstate
 xcuserdata/
+*.xccheckout
+project.xcworkspace/
