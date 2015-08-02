@@ -1,5 +1,6 @@
 # CsoundAU
 Enables running Csound instruments or effects as AudioUnits for use in Logic, GarageBand etc.
+You can get an overview of how to use this framework in this video [here](https://www.youtube.com/watch?v=52rwayPxZDk)
 
 ## Dependencies
 - Xcode 6+
