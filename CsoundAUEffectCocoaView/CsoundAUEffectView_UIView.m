@@ -19,9 +19,9 @@
  *
  */
 
-#import "CsoundAUView.h"
+#import "CsoundAUViewBase.h"
 
-@interface CsoundAUEffectView_UIView : CsoundAUView
+@interface CsoundAUEffectView_UIView : CsoundAUViewBase
 {
     __weak IBOutlet NSSlider *mix;
     __weak IBOutlet NSSlider *time;

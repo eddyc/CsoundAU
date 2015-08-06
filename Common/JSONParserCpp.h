@@ -1,5 +1,5 @@
 /*
- * CsoundAUSynthView_UIView.m
+ * JSONParser.h
  *
  * Copyright (C) 2015 Edward Costello
  *
@@ -19,20 +19,12 @@
  *
  */
 
-#import "CsoundAUCocoaView.h"
-
-@interface CsoundAUSynthView_UIView : CsoundAUCocoaView
-{
-    __weak IBOutlet NSSlider *release;
-    __weak IBOutlet NSSlider *attack;
-}
-@end
-
-@implementation CsoundAUSynthView_UIView
-
-- (void)registerParameters
-{
-    [self setParameter:@"Attack" forOutlet:attack];
-    [self setParameter:@"Release" forOutlet:release];
-}
-@end
+#ifdef __cplusplus
+#include <vector>
+#include <map>
+#include <string>
+#import "Parameter.h"
+vector<Parameter> parseParameters(string bundleID);
+vector<pair<string, map<string, Float32>>> parsePresets(string bundleID);
+map<string, string> parseConfiguration(string bundleID);
+#endif

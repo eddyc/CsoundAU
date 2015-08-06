@@ -20,18 +20,19 @@
  */
 
 #import "CsoundAUViewFactory.h"
-#import "JSONParser.h"
+#import "CsoundAUHTMLView.h"
+#import "JSONParserObjC.h"
 
 @implementation CsoundAUViewFactory
 
 - (unsigned)interfaceVersion
 {
-	return 0;
+    return 0;
 }
 
 - (NSString *)description
 {
-	return @"Csound AU";
+    return @"Csound AU";
 }
 
 - (NSView *)uiViewForAudioUnit:(AudioUnit)inAU withSize:(NSSize)inPreferredSize
@@ -42,38 +43,37 @@
                               stringByDeletingLastPathComponent]
                              stringByDeletingLastPathComponent]
                             stringByDeletingLastPathComponent];
-    string auBundlePath = [[[NSBundle bundleWithPath:bundlePath] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding];
-    map<string, string> configuration = parseConfiguration(auBundlePath);
+    NSBundle *auBundle = [NSBundle bundleWithPath:bundlePath];
+    NSDictionary *result = synchroniseArchivedObjects(auBundle);
+    NSMutableArray *parameters = result[@"Parameters"];
+    NSMutableDictionary *configuration = result[@"Configuration"];
     
-    if (configuration["NibName"].length() > 0) {
+    if ([configuration[@"ViewType"] compare:@"Cocoa"] == 0) {
+
+        if (![[NSBundle bundleForClass:[self class]] loadNibNamed:configuration[@"ViewFileName"]
+                                                            owner:self
+                                                  topLevelObjects:nil]) {
+            NSLog (@"Unable to load nib for view.");
+            return nil;
+        }
         
-        return [self loadNib:configuration["NibName"] withBundlePath:auBundlePath forAU:inAU];
+        uiFreshlyLoadedView.auBundlePath = bundlePath;
+        [uiFreshlyLoadedView setAU:inAU parameters:parameters];
+        
+        NSView *returnView = uiFreshlyLoadedView;
+        uiFreshlyLoadedView = nil;
+        return returnView;
     }
     else {
-        NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, inPreferredSize.width, inPreferredSize.height)];
         
+        CsoundAUHTMLView *view= [[CsoundAUHTMLView alloc] initWithBundle:bundle
+                                                           configuration:configuration
+                                                              parameters:parameters
+                                                               audioUnit:inAU];
         return view;
     }
     
     return nil;
-}
-
-- (NSView *)loadNib:(string)nibNameString withBundlePath:(string)auBundlePath forAU:(AudioUnit)inAU
-{
-    NSString *nibName = [NSString stringWithUTF8String:nibNameString.c_str()];
-    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:nibName
-                                                        owner:self
-                                              topLevelObjects:nil]) {
-        NSLog (@"Unable to load nib for view.");
-        return nil;
-    }
-    
-    uiFreshlyLoadedView.auBundlePath = [NSString stringWithCString:auBundlePath.c_str() encoding:NSUTF8StringEncoding];
-    [uiFreshlyLoadedView setAU:inAU];
-    
-    NSView *returnView = uiFreshlyLoadedView;
-    uiFreshlyLoadedView = nil;
-    return returnView;
 }
 
 @end

@@ -1,5 +1,6 @@
 {
     "ViewBundleID":"CsoundAUSynthCocoaView",
-    "NibName":"CsoundAUSynthCocoaView",
+    "ViewType":"Cocoa",
+    "ViewFileName":"CsoundAUSynthCocoaView",
     "csd":"Test_CsoundAUSynth"
 }

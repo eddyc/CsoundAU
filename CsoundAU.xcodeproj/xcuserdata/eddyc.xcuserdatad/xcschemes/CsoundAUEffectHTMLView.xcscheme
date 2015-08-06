@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
-               BuildableName = "CsoundAUSynthHTML.component"
-               BlueprintName = "CsoundAUSynthHTML"
+               BlueprintIdentifier = "44D7510E1B701B8500845A73"
+               BuildableName = "CsoundAUEffectHTMLView.bundle"
+               BlueprintName = "CsoundAUEffectHTMLView"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,25 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <PathRunnable
-         runnableDebuggingMode = "0"
-         FilePath = "/Volumes/Data/Applications/GarageBand.app">
-      </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
-            BuildableName = "CsoundAUSynthHTML.component"
-            BlueprintName = "CsoundAUSynthHTML"
+            BlueprintIdentifier = "44D7510E1B701B8500845A73"
+            BuildableName = "CsoundAUEffectHTMLView.bundle"
+            BlueprintName = "CsoundAUEffectHTMLView"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "$(SRCROOT)/Testing/Test_CsoundAUSynth.trak"
-            isEnabled = "NO">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
-            BuildableName = "CsoundAUSynthHTML.component"
-            BlueprintName = "CsoundAUSynthHTML"
+            BlueprintIdentifier = "44D7510E1B701B8500845A73"
+            BuildableName = "CsoundAUEffectHTMLView.bundle"
+            BlueprintName = "CsoundAUEffectHTMLView"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

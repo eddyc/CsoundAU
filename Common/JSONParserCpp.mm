@@ -20,7 +20,7 @@
  */
 
 #include <Foundation/Foundation.h>
-#include "JSONParser.h"
+#include "JSONParserCpp.h"
 
 NSArray *getJSONFromFile(string bundleID, string resourceName)
 {
@@ -41,6 +41,14 @@ NSArray *getJSONFromFile(string bundleID, string resourceName)
                                                          error:&error];
     return allKeys;
 }
+
+
+NSArray *getJSONFromFile(NSString *bundleID, NSString *resourceName)
+{
+    return getJSONFromFile([bundleID cStringUsingEncoding:NSUTF8StringEncoding],
+                           [resourceName cStringUsingEncoding:NSUTF8StringEncoding]);
+}
+
 
 vector<Parameter> parseParameters(string bundleID)
 {
@@ -132,21 +140,36 @@ map<string, string> parseConfiguration(string bundleID)
     NSArray *configurationArray = [[NSArray alloc]
                                    initWithObjects:
                                    allKeys[@"ViewBundleID"],
-                                   allKeys[@"NibName"],
+                                   allKeys[@"ViewType"],
+                                   allKeys[@"ViewFileName"],
                                    allKeys[@"csd"],
                                    nil];
     
-    if (configurationArray.count != 3) {
+    if (configurationArray.count < 4) {
         
         printf("Error, configuration json malformed\nExiting\n");
         exit(-1);
     }
     
     string viewBundleID = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
-    string nibName = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
-    string csdName = [configurationArray[2] cStringUsingEncoding:NSUTF8StringEncoding];
+    string viewType = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
+    string viewFileName = [configurationArray[2] cStringUsingEncoding:NSUTF8StringEncoding];
+    string csdName = [configurationArray[3] cStringUsingEncoding:NSUTF8StringEncoding];
     configuration["ViewBundleID"] = viewBundleID;
-    configuration["NibName"] = nibName;
+    configuration["ViewType"] = viewType;
+    configuration["ViewFileName"] = viewFileName;
     configuration["csd"] = csdName;
+    
+    if (allKeys[@"ViewWidth"] != nil) {
+        
+        configuration["ViewWidth"] = [allKeys[@"ViewWidth"] cStringUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    if (allKeys[@"ViewHeight"] != nil) {
+        
+        configuration["ViewHeight"] = [allKeys[@"ViewHeight"] cStringUsingEncoding:NSUTF8StringEncoding];
+    }
     return configuration;
 }
+
+

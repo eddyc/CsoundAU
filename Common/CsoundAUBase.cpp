@@ -20,7 +20,7 @@
  */
 
 #include "CsoundAUBase.h"
-#include "JSONParser.h"
+#include "JSONParserCpp.h"
 
 CsoundAUBase::CsoundAUBase(AUBase *parent)
 {
@@ -33,9 +33,9 @@ CsoundAUBase::CsoundAUBase(AUBase *parent)
     CFBundleRef bundle = CFBundleGetBundleWithIdentifier(bundleID);
     CFStringRef csdNameString = CFStringCreateWithCString(kCFAllocatorDefault, csdName.c_str(), kCFStringEncodingASCII);
     CFURLRef csdURL = CFBundleCopyResourceURL(bundle,
-                                                 csdNameString,
-                                                 CFSTR("csd"),
-                                                 NULL);
+                                              csdNameString,
+                                              CFSTR("csd"),
+                                              NULL);
     
     CFStringRef csdStringRef = CFURLCopyPath(csdURL);
     char *filePathString = (char *)CFStringGetCStringPtr(csdStringRef, kCFStringEncodingUTF8);
@@ -90,6 +90,7 @@ void CsoundAUBase::NewParameter(string name,
 
 void CsoundAUBase::SetParameters(vector<Parameter> parameters)
 {
+    
     for (size_t i = 0; i < parameters.size(); ++i) {
         
         Parameter parameter = parameters[i];
@@ -148,7 +149,7 @@ void CsoundAUBase::SetPresets(vector<pair<string, Preset>> presetsIn)
         preset.presetName = CFStringCreateWithCString(kCFAllocatorDefault, presets[i].first.c_str(), kCFStringEncodingASCII);
         auPresetMenuEntries.push_back(preset);
     }
-
+    
 }
 
 ComponentResult CsoundAUBase::GetPresets (CFArrayRef	*outData) const

@@ -1,5 +1,5 @@
 /*
- * JSONParser.h
+ * CsoundAUView.h
  *
  * Copyright (C) 2015 Edward Costello
  *
@@ -19,10 +19,15 @@
  *
  */
 
-#include <vector>
-#include <map>
-#include <string>
-#import "Parameter.h"
-vector<Parameter> parseParameters(string bundleID);
-vector<pair<string, map<string, Float32>>> parsePresets(string bundleID);
-map<string, string> parseConfiguration(string bundleID);
+
+#import <Cocoa/Cocoa.h>
+#import <AudioUnit/AudioUnit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import "CsoundAUViewBase.h"
+
+@interface CsoundAUCocoaView : CsoundAUViewBase
+
+@property NSString *auBundlePath;
+- (void)setParameter:(NSString *)parameterName forOutlet:(NSControl *)outlet;
+- (void)setAU:(AudioUnit)inAU parameters:(NSMutableArray *)parametersIn;
+@end

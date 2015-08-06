@@ -21,11 +21,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <AudioUnit/AUCocoaUIView.h>
-#import "CsoundAUView.h"
+#import "CsoundAUCocoaView.h"
 
 @interface CsoundAUViewFactory : NSObject <AUCocoaUIBase>
 {
-    IBOutlet CsoundAUView *uiFreshlyLoadedView;
+    IBOutlet CsoundAUCocoaView *uiFreshlyLoadedView;
 }
 - (NSString *) description;
 
