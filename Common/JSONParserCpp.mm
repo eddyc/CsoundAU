@@ -3,20 +3,6 @@
  *
  * Copyright (C) 2015 Edward Costello
  *
- * This software is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
  */
 
 #include <Foundation/Foundation.h>
@@ -27,14 +13,14 @@ NSArray *getJSONFromFile(string bundleID, string resourceName)
     NSString *bundleIDString = [NSString stringWithUTF8String:bundleID.c_str()];
     NSString *resourceString = [NSString stringWithUTF8String:resourceName.c_str()];
     NSBundle *bundle = [NSBundle bundleWithIdentifier:bundleIDString];
-    
+
     NSString *path  = [bundle pathForResource:resourceString
                                        ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:path
                                                            encoding:NSUTF8StringEncoding
                                                               error:nil];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    
+
     NSError *error;
     NSArray *allKeys = [NSJSONSerialization JSONObjectWithData:jsonData
                                                        options:NSJSONWritingPrettyPrinted
@@ -53,10 +39,10 @@ NSArray *getJSONFromFile(NSString *bundleID, NSString *resourceName)
 vector<Parameter> parseParameters(string bundleID)
 {
     NSArray *allKeys = getJSONFromFile(bundleID, "Parameters");
-    
+
     vector<Parameter> parameters;
     for (size_t i = 0; i < allKeys.count; i++) {
-        
+
         NSDictionary *parameterJSON = [allKeys objectAtIndex:i];
         NSArray *parameterArray = [[NSArray alloc]
                                    initWithObjects:
@@ -69,67 +55,67 @@ vector<Parameter> parseParameters(string bundleID)
                                    parameterJSON[@"strings"]?:@false,
                                    nil];
         for (size_t j = 0; j < 4 /* iterate to 'defaultValue' */; ++j) {
-            
+
             if ([[parameterArray objectAtIndex:j]  isEqual: @"empty"]) {
-                
+
                 printf("Required fields not given for parameter, exiting\n");
                 exit(-1);
             }
         }
-        
+
         const char *name = [parameterArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
         Float32 minValue = [parameterArray[1] floatValue];
         Float32 maxValue = [parameterArray[2] floatValue];
         Float32 defaultValue = [parameterArray[3] floatValue];
         UInt32 unit = (UInt32)[parameterArray[4] integerValue];
         UInt32 flag = (UInt32)[parameterArray[5] integerValue];
-        
+
         if ([[parameterArray objectAtIndex:6] isNotEqualTo:@false]) {
-            
+
             vector<string> strings;
             NSArray *stringArray = [parameterArray objectAtIndex:6];
-            
+
             for (size_t j = 0; j < stringArray.count; ++j) {
-                
+
                 strings.push_back([[stringArray objectAtIndex:j] cStringUsingEncoding:NSUTF8StringEncoding]);
             }
-            
+
             parameters.push_back({name, minValue, maxValue, defaultValue, unit, flag, strings});
         }
         else {
-            
+
             parameters.push_back({name, minValue, maxValue, defaultValue, unit, flag});
         }
     }
-    
+
     return parameters;
 }
 
 vector<pair<string, map<string, Float32>>> parsePresets(string bundleID)
 {
     NSArray *allKeys = getJSONFromFile(bundleID, "Presets");
-    
+
     vector<pair<string, map<string, Float32>>> presets;
-    
+
     for (size_t i = 0; i < allKeys.count; i++) {
-        
+
         NSDictionary *presetJSON = allKeys[i];
         string name = [presetJSON[@"name"] cStringUsingEncoding:NSUTF8StringEncoding]?:to_string(i);
         map<string, Float32> preset;
-        
+
         NSDictionary *presetParameters = presetJSON[@"preset"];
         NSArray *presetKeys = presetParameters.allKeys;
-        
+
         for (size_t j = 0; j < presetKeys.count; ++j) {
-            
+
             Float32 value = [presetParameters[presetKeys[j]] floatValue];
             string key = [presetKeys[j] cStringUsingEncoding:NSUTF8StringEncoding];
             preset[key] = value;
         }
-        
+
         presets.push_back({name, preset});
     }
-    
+
     return presets;
 }
 
@@ -144,13 +130,19 @@ map<string, string> parseConfiguration(string bundleID)
                                    allKeys[@"ViewFileName"],
                                    allKeys[@"csd"],
                                    nil];
+<<<<<<< HEAD:Common/JSONParserCpp.mm
     
     if (configurationArray.count < 4) {
         
+=======
+
+    if (configurationArray.count != 3) {
+
+>>>>>>> 5e2940a7ae6ef511d04bd43ca25c4b5f5c09b49e:Common/JSONParser.mm
         printf("Error, configuration json malformed\nExiting\n");
         exit(-1);
     }
-    
+
     string viewBundleID = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
     string viewType = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
     string viewFileName = [configurationArray[2] cStringUsingEncoding:NSUTF8StringEncoding];
