@@ -1,5 +1,5 @@
 /*
- * CsoundAUView.h
+ * CsoundAUCocoaView.h
  *
  * Copyright (C) 2015 Edward Costello
  *

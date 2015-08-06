@@ -1,5 +1,5 @@
 /*
- * CsoundAUEffectView_ViewFactory.m
+ * CsoundAUView_ViewFactory.m
  *
  * Copyright (C) 2015 Edward Costello
  *
@@ -62,26 +62,4 @@
     return nil;
 }
 
-<<<<<<< HEAD:Common/CsoundAUViewFactory.m
-=======
-- (NSView *)loadNib:(string)nibNameString withBundlePath:(string)auBundlePath forAU:(AudioUnit)inAU
-{
-    NSString *nibName = [NSString stringWithUTF8String:nibNameString.c_str()];
-    if (![[NSBundle bundleForClass:[self class]] loadNibNamed:nibName
-                                                        owner:self
-                                              topLevelObjects:nil]) {
-        NSLog (@"Unable to load nib for view.");
-        return nil;
-    }
-
-    uiFreshlyLoadedView.auBundlePath = [NSString stringWithCString:auBundlePath.c_str() encoding:NSUTF8StringEncoding];
-    [uiFreshlyLoadedView setAU:inAU];
-
-    NSView *returnView = uiFreshlyLoadedView;
-    uiFreshlyLoadedView = nil;
-
-    return returnView;
-}
-
->>>>>>> 5e2940a7ae6ef511d04bd43ca25c4b5f5c09b49e:Common/CsoundAUViewFactory.mm
 @end

@@ -1,5 +1,5 @@
 /*
- * CsoundAUEffectView_ViewFactory.h
+ * CsoundAUView_ViewFactory.h
  *
  * Copyright (C) 2015 Edward Costello
  *

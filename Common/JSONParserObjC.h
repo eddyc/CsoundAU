@@ -1,10 +1,9 @@
-//
-//  JSONParserObjC.h
-//  CsoundAU
-//
-//  Created by Edward Costello on 24/07/2015.
-//
-//
+/*
+ * JSONParserObjC.h
+ *
+ * Copyright (C) 2015 Edward Costello
+ *
+ */
 
 #import <Foundation/Foundation.h>
 

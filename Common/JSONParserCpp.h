@@ -1,5 +1,5 @@
 /*
- * JSONParser.h
+ * JSONParserCpp.h
  *
  * Copyright (C) 2015 Edward Costello
  *

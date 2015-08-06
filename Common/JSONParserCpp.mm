@@ -1,5 +1,5 @@
 /*
- * JSONParser.mm
+ * JSONParserCpp.mm
  *
  * Copyright (C) 2015 Edward Costello
  *
@@ -130,15 +130,9 @@ map<string, string> parseConfiguration(string bundleID)
                                    allKeys[@"ViewFileName"],
                                    allKeys[@"csd"],
                                    nil];
-<<<<<<< HEAD:Common/JSONParserCpp.mm
     
     if (configurationArray.count < 4) {
         
-=======
-
-    if (configurationArray.count != 3) {
-
->>>>>>> 5e2940a7ae6ef511d04bd43ca25c4b5f5c09b49e:Common/JSONParser.mm
         printf("Error, configuration json malformed\nExiting\n");
         exit(-1);
     }
