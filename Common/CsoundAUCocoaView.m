@@ -11,6 +11,8 @@
 @interface CsoundAUCocoaView ()
 {
     NSMutableArray *registeredParameters;
+    NSMutableArray *parameters;
+    NSMutableDictionary *parameterIndices;
 }
 @end
 
