@@ -2,8 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMainNibFile</key>
-	<string>CsoundAUSynthView</string>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Csound AudioUnit Effect</string>
+			<key>factoryFunction</key>
+			<string>CsoundAUFactory</string>
+			<key>manufacturer</key>
+			<string>CSFX</string>
+			<key>name</key>
+			<string>Csound AudioUnit Effect</string>
+			<key>sandboxSafe</key>
+			<true/>
+			<key>subtype</key>
+			<string>CSFX</string>
+			<key>type</key>
+			<string>aufx</string>
+			<key>version</key>
+			<integer>65536</integer>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -23,6 +42,6 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSPrincipalClass</key>
-	<string>CsoundAUViewFactory</string>
+	<string></string>
 </dict>
 </plist>

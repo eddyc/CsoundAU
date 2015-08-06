@@ -69,9 +69,9 @@
 					<dict>
 						<key>File 1</key>
 						<data>
-						Ym9va1AEAAAAAAQQMAAAAJMCgJB5
-						19Hc7LDYRLcFpOg0iLur2cQMYQ7E
-						o+jX+b7XcAMAAAQAAAADAwAAAAgA
+						Ym9va1AEAAAAAAQQMAAAAPV9TlMF
+						wfUY1QxCJMgdsTTBSeJPoHRMYyGL
+						A5uhV6VfcAMAAAQAAAADAwAAAAgA
 						KAcAAAABAQAAVm9sdW1lcwAEAAAA
 						AQEAAERhdGEHAAAAAQEAAERyb3Bi
 						b3gACwAAAAEBAABQcm9ncmFtbWlu
@@ -84,12 +84,12 @@
 						ojcAAAAAAAAIAAAABAMAAAIAAAAA
 						AAAACAAAAAQDAABnAAAAAAAAAAgA
 						AAAEAwAAUREDAAAAAAAIAAAABAMA
-						AOe+AwAAAAAACAAAAAQDAAAjYBMA
-						AAAAAAgAAAAEAwAAF2MTAAAAAAAI
-						AAAABAMAABW2EwAAAAAAIAAAAAEG
+						AOe+AwAAAAAACAAAAAQDAACv1hMA
+						AAAAAAgAAAAEAwAAXtcTAAAAAAAI
+						AAAABAMAAGHXEwAAAAAAIAAAAAEG
 						AADEAAAA1AAAAOQAAAD0AAAABAEA
 						ABQBAAAkAQAANAEAAAgAAAAABAAA
-						QbqTmWIAAAAYAAAAAQIAAAEAAAAA
+						QbtXwMkAAAAYAAAAAQIAAAEAAAAA
 						AAAADwAAAAAAAAAAAAAAAAAAABUA
 						AAABCQAAZmlsZTovLy9Wb2x1bWVz
 						L0RhdGEvAAAACAAAAAQDAAAAkAz+
@@ -223,7 +223,7 @@
 			<key>in channels</key>
 			<integer>0</integer>
 			<key>io num frames</key>
-			<integer>512</integer>
+			<integer>1024</integer>
 			<key>name</key>
 			<string>Built-in Output</string>
 			<key>out channels</key>
@@ -299,7 +299,7 @@
 								AAAAAAAAAAAA
 								AAADAAAAAAAA
 								AAAAAAABAAAA
-								AAAAAAI/CXE7
+								AAAAAAIAAAAA
 								</data>
 								<key>manufacturer</key>
 								<integer>1129530968</integer>
@@ -463,7 +463,12 @@
 				<key>kAUInspectorStateKey_EffectIndex</key>
 				<integer>-1</integer>
 				<key>kAUInspectorStateKey_PresetDrawerExpandedItems</key>
-				<array/>
+				<array>
+					<array>
+						<string>User</string>
+						<true/>
+					</array>
+				</array>
 				<key>kAUInspectorStateKey_PresetDrawerShowing</key>
 				<false/>
 				<key>kAUInspectorStateKey_TrackIndex</key>
@@ -502,7 +507,7 @@
 				<key>kAUInspectorStateKey_WindowLevel</key>
 				<integer>9223372036854775807</integer>
 				<key>kAUInspectorStateKey_WindowRect</key>
-				<string>{{849, 365}, {340, 324}}</string>
+				<string>{{548, 141}, {500, 592}}</string>
 			</dict>
 		</array>
 	</dict>

@@ -3,20 +3,6 @@
  *
  * Copyright (C) 2015 Edward Costello
  *
- * This software is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
  */
 
 #include "CsoundAUEffect.h"
@@ -40,38 +26,38 @@ OSStatus CsoundAUEffect::Render(UInt32 inNumberFrames,
     MYFLT *spout = csoundGetSpout(csound);
     MYFLT *spin = csoundGetSpin(csound);
     Float32 *buffer;
-    
+
     for (int i = 0; i < slices; i++){
-        
+
         for (int k = 0; k < nchnls; k++){
-            
+
             buffer = (Float32 *) inputData.mBuffers[k].mData;
-            
+
             for(int j = 0; j < ksmps; j++){
-                
+
                 spin[j*nchnls+k] = buffer[j+i*ksmps];
             }
         }
-        
+
         for (UInt32 i = 0; i < parameters.size(); ++i) {
-            
+
             Float32 value = GetParameter(i);
             csoundSetControlChannel(csound, parameters[i].name.c_str(), value);
         }
-        
+
         csoundPerformKsmps(csound);
-        
+
         for (int k = 0; k < nchnls; k++) {
-            
+
             buffer = (Float32 *) outputData.mBuffers[k].mData;
-            
+
             for (int j = 0; j < ksmps; j++){
-                
+
                 buffer[j+i*ksmps] = (Float32) spout[j*nchnls+k];
             }
         }
     }
-    
+
     return 0;
 }
 
@@ -82,7 +68,7 @@ OSStatus CsoundAUEffect::ProcessBufferLists(AudioUnitRenderActionFlags &ioAction
 {
     if (ShouldBypassEffect())
         return noErr;
-    
+
     switch (mCommonPCMFormat) {
         case CAStreamBasicDescription::kPCMFormatFloat32 :
             Render(inFramesToProcess, inBuffer, outBuffer);
@@ -90,7 +76,7 @@ OSStatus CsoundAUEffect::ProcessBufferLists(AudioUnitRenderActionFlags &ioAction
         default :
             throw CAException(kAudio_UnimplementedError);
     }
-    
+
     return noErr;
 }
 
@@ -133,7 +119,7 @@ ComponentResult CsoundAUEffect::GetPropertyInfo (AudioUnitPropertyID inID,
                                                  UInt32 &outDataSize,
                                                  Boolean &outWritable)
 {
- 
+
     return CsoundAUBase::GetPropertyInfo (inID, inScope, inElement, outDataSize, outWritable, CallGetParentPropertyInfo);
 }
 

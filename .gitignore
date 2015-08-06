@@ -1,4 +1,4 @@
-CsoundAU.xcodeproj/project.xcworkspace/xcuserdata/eddyc.xcuserdatad/
-CsoundAU.xcodeproj/xcuserdata/eddyc.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
-UserInterfaceState[Conflict].xcuserstate
-UserInterfaceState.xcuserstate
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+project.xcworkspace/

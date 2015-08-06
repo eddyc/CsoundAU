@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-               BuildableName = "CsoundAUEffect.component"
-               BlueprintName = "CsoundAUEffect"
+               BuildableName = "CsoundAUEffectCocoa.component"
+               BlueprintName = "CsoundAUEffectCocoa"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,14 +41,15 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.audio.aulab"
          FilePath = "/Applications/AU Lab.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-            BuildableName = "CsoundAUEffect.component"
-            BlueprintName = "CsoundAUEffect"
+            BuildableName = "CsoundAUEffectCocoa.component"
+            BlueprintName = "CsoundAUEffectCocoa"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "440C9DB81B4ADF6900B3E72F"
-            BuildableName = "CsoundAUEffect.component"
-            BlueprintName = "CsoundAUEffect"
+            BuildableName = "CsoundAUEffectCocoa.component"
+            BlueprintName = "CsoundAUEffectCocoa"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
