@@ -119,43 +119,24 @@ vector<pair<string, map<string, Float32>>> parsePresets(string bundleID)
     return presets;
 }
 
+
 map<string, string> parseConfiguration(string bundleID)
 {
     NSDictionary *allKeys = (NSDictionary *)getJSONFromFile(bundleID, "Configuration");
     map<string, string> configuration;
     NSArray *configurationArray = [[NSArray alloc]
                                    initWithObjects:
-                                   allKeys[@"ViewBundleID"],
-                                   allKeys[@"ViewType"],
-                                   allKeys[@"ViewFileName"],
                                    allKeys[@"csd"],
                                    nil];
     
-    if (configurationArray.count < 4) {
+    if (configurationArray.count < 1) {
         
         printf("Error, configuration json malformed\nExiting\n");
         exit(-1);
     }
-
-    string viewBundleID = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
-    string viewType = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
-    string viewFileName = [configurationArray[2] cStringUsingEncoding:NSUTF8StringEncoding];
-    string csdName = [configurationArray[3] cStringUsingEncoding:NSUTF8StringEncoding];
-    configuration["ViewBundleID"] = viewBundleID;
-    configuration["ViewType"] = viewType;
-    configuration["ViewFileName"] = viewFileName;
+    
+    string csdName = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
     configuration["csd"] = csdName;
     
-    if (allKeys[@"ViewWidth"] != nil) {
-        
-        configuration["ViewWidth"] = [allKeys[@"ViewWidth"] cStringUsingEncoding:NSUTF8StringEncoding];
-    }
-    
-    if (allKeys[@"ViewHeight"] != nil) {
-        
-        configuration["ViewHeight"] = [allKeys[@"ViewHeight"] cStringUsingEncoding:NSUTF8StringEncoding];
-    }
     return configuration;
 }
-
-

@@ -66,6 +66,7 @@ OSStatus CsoundAUEffect::ProcessBufferLists(AudioUnitRenderActionFlags &ioAction
                                             AudioBufferList &outBuffer,
                                             UInt32	inFramesToProcess)
 {
+
     if (ShouldBypassEffect())
         return noErr;
 
@@ -76,6 +77,7 @@ OSStatus CsoundAUEffect::ProcessBufferLists(AudioUnitRenderActionFlags &ioAction
         default :
             throw CAException(kAudio_UnimplementedError);
     }
+
 
     return noErr;
 }
