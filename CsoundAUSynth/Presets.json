@@ -1,9 +1,9 @@
 [
     {
         "name":"Slow Attack Long Release",
-        "preset":{
-                    "Attack":0.9,
-                    "Release":0.5
-                 }
+        "parameters":{
+                        "Attack":0.9,
+                        "Release":0.5
+                     }
     }
 ]

@@ -75,7 +75,8 @@ void CsoundAUBase::NewParameter(string name,
 
 void CsoundAUBase::SetParameters(vector<Parameter> parameters)
 {
-    
+    parent->Globals()->UseIndexedParameters((int)parameters.size());
+
     for (size_t i = 0; i < parameters.size(); ++i) {
         
         Parameter parameter = parameters[i];
@@ -90,12 +91,12 @@ void CsoundAUBase::SetParameters(vector<Parameter> parameters)
         }
     }
     
+
     for (UInt32 i = 0; i < parameters.size(); ++i) {
         
         parent->Globals()->SetParameter(i, parameters[i].defaultValue);
     }
     
-    parent->Globals()->UseIndexedParameters((int)parameters.size());
 }
 void CsoundAUBase::NewPreset(string name, Preset preset)
 {

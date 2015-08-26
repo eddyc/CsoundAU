@@ -103,7 +103,7 @@ vector<pair<string, map<string, Float32>>> parsePresets(string bundleID)
         string name = [presetJSON[@"name"] cStringUsingEncoding:NSUTF8StringEncoding]?:to_string(i);
         map<string, Float32> preset;
 
-        NSDictionary *presetParameters = presetJSON[@"preset"];
+        NSDictionary *presetParameters = presetJSON[@"parameters"];
         NSArray *presetKeys = presetParameters.allKeys;
 
         for (size_t j = 0; j < presetKeys.count; ++j) {

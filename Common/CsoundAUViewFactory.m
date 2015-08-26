@@ -23,8 +23,8 @@
 
 - (NSView *)uiViewForAudioUnit:(AudioUnit)inAU withSize:(NSSize)inPreferredSize
 {
-
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLEID];
+    NSString *bundleID = @BUNDLEID;
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:bundleID];
     NSString *bundlePath = [[[[bundle bundlePath]
                               stringByDeletingLastPathComponent]
                              stringByDeletingLastPathComponent]

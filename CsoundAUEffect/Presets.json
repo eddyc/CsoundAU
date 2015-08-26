@@ -1,10 +1,10 @@
 [
     {
         "name":"Stuff",
-        "preset":{
-                    "Time":0.1,
-                    "Feedback":0.1,
-                    "Mix":0.5
-                 }
+        "parameters":{
+                        "Time":0.1,
+                        "Feedback":0.1,
+                        "Mix":0.5
+                     }
     }
 ]
