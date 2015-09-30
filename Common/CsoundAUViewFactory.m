@@ -30,9 +30,8 @@
                              stringByDeletingLastPathComponent]
                             stringByDeletingLastPathComponent];
     NSBundle *auBundle = [NSBundle bundleWithPath:bundlePath];
-    NSDictionary *result = synchroniseArchivedObjects(auBundle);
-    NSMutableArray *parameters = result[@"Parameters"];
-    NSMutableDictionary *configuration = result[@"Configuration"];
+    NSMutableArray *parameters = parseParameters(auBundle);
+    NSMutableDictionary *configuration = parseConfiguration([auBundle bundleIdentifier]);
     
     if ([configuration[@"ViewType"] compare:@"Cocoa"] == 0) {
 

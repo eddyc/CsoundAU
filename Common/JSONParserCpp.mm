@@ -80,11 +80,14 @@ vector<Parameter> parseParameters(string bundleID)
                 strings.push_back([[stringArray objectAtIndex:j] cStringUsingEncoding:NSUTF8StringEncoding]);
             }
 
-            parameters.push_back({name, minValue, maxValue, defaultValue, unit, flag, strings});
+          
+            Parameter parameter = Parameter(name, minValue, maxValue, defaultValue, (AudioUnitParameterUnit)unit, flag, strings);
+            parameters.push_back(parameter);
         }
         else {
 
-            parameters.push_back({name, minValue, maxValue, defaultValue, unit, flag});
+            Parameter parameter = Parameter(name, minValue, maxValue, defaultValue, (AudioUnitParameterUnit)unit, flag);
+            parameters.push_back(parameter);
         }
     }
 
@@ -136,7 +139,10 @@ map<string, string> parseConfiguration(string bundleID)
     }
     
     string csdName = [configurationArray[0] cStringUsingEncoding:NSUTF8StringEncoding];
+    string viewBundleID = [configurationArray[1] cStringUsingEncoding:NSUTF8StringEncoding];
+    
     configuration["csd"] = csdName;
+    configuration["ViewBundleID"] = viewBundleID;
     
     return configuration;
 }

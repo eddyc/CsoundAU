@@ -12,6 +12,7 @@ using namespace std;
 
 class Parameter{
 public:
+    Parameter();
     Parameter(string name,
               Float32 minValue,
               Float32 maxValue,

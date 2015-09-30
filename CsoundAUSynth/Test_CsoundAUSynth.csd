@@ -8,9 +8,9 @@ nchnls = 2
 ksmps = 64
 sr = 44100
 
-massign 1,1
+massign 1, "Synth"
 
-instr 1
+instr Synth
 
 iCps    cpsmidi
 iAmp    ampmidi   0dbfs * 0.3

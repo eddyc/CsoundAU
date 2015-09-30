@@ -894,7 +894,7 @@
 		440C9CF71B4AB1CB00B3E72F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				TargetAttributes = {
 					440C9D001B4AB1D700B3E72F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1259,12 +1259,15 @@
 		440C9CFB1B4AB1CB00B3E72F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		440C9CFC1B4AB1CB00B3E72F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 			};
 			name = Release;
 		};

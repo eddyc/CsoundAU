@@ -1,7 +1,6 @@
 <CsoundSynthesizer>
 <CsOptions>
 -+rtaudio=null -odac
-
 </CsOptions>
 <CsInstruments>
 nchnls = 2
@@ -9,31 +8,26 @@ nchnls = 2
 ksmps = 64
 sr = 44100
 
-schedule 1, 0, -1
 
+instr Delay
 
-opcode Delay, a, aikkk
-
-    aInput, iMaxDelayTime, kDelayTime, kFeedback, kMix xin
-    aDelayOut delayr	 iMaxDelayTime
-    aDelayTap deltapi kDelayTime
-    delayw	aInput + aDelayTap * kFeedback
-    xout aDelayTap * (1 - kMix) + aInput * kMix
-endop
-
-instr 1
-
-kTime chnget "Time"
-kFeedback chnget "Feedback"
-kMix chnget "Mix"
-
-aInputL, aInputR ins
-
-aOutputL Delay aInputL, 10, kTime, kFeedback, kMix
-aOutputR Delay aInputR, 10, kTime, kFeedback, kMix
-
-outs aOutputL, aOutputR
+    iMaxDelayTime = 1.
+    kDelayTime = 0.3
+    kFeedback = 0.8
+    kMix = 0.5
+    aInputL, aInputR ins
+    aInput = (aInputL + aInputR) / 2
+    aDelayOut delayr iMaxDelayTime
+    aDelayTap deltap kDelayTime
+    delayw  aInput + aDelayTap * kFeedback
+    aOut = aInput * kMix + aDelayTap * (1 - kMix)
+    outs aOut, aOut
 endin
 
+schedule "Delay", 0, -1
+
 </CsInstruments>
+<CsScore>
+e36000
+</CsScore>
 </CsoundSynthesizer>
