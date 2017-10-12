@@ -4,96 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CsoundAUEffectCocoa.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>CsoundAUEffectCocoaView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>CsoundAUEffectHTML.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>CsoundAUEffectHTMLView.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>CsoundAUSynthCocoa.xcscheme</key>
+		<key>CsoundAUSynthHTML.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>CsoundAUSynthCocoaView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>CsoundAUSynthHTML.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>CsoundAUSynthHTMLView.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>440C9D001B4AB1D700B3E72F</key>
+		<key>443C606E1C9B32650041A086</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>440C9DB81B4ADF6900B3E72F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44890B661B4B0BB600DAD955</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44AB3B3F1B4C3484003749EA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44D750CC1B70141900845A73</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44D7510E1B701B8500845A73</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44DDE4081B5C274C0094B673</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44DDE4611B5C2D1D0094B673</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44DDE4A21B5C33880094B673</key>
+		<key>44430F311CA094A70038BAA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

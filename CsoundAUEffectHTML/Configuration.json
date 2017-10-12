@@ -1,8 +1,0 @@
-{
-    "ViewBundleID":"CsoundAUEffectHTMLView",
-    "ViewType":"HTML",
-    "ViewFileName":"index",
-    "ViewWidth":"500",
-    "ViewHeight":"350",
-    "csd":"Test_CsoundAUEffect"
-}

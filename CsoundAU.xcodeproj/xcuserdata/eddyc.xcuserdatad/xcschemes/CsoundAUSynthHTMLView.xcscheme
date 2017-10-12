@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44DDE4A21B5C33880094B673"
+               BlueprintIdentifier = "44430F311CA094A70038BAA7"
                BuildableName = "CsoundAUSynthHTMLView.bundle"
                BlueprintName = "CsoundAUSynthHTMLView"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4A21B5C33880094B673"
+            BlueprintIdentifier = "44430F311CA094A70038BAA7"
             BuildableName = "CsoundAUSynthHTMLView.bundle"
             BlueprintName = "CsoundAUSynthHTMLView"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4A21B5C33880094B673"
+            BlueprintIdentifier = "44430F311CA094A70038BAA7"
             BuildableName = "CsoundAUSynthHTMLView.bundle"
             BlueprintName = "CsoundAUSynthHTMLView"
             ReferencedContainer = "container:CsoundAU.xcodeproj">

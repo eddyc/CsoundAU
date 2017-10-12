@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+               BlueprintIdentifier = "443C606E1C9B32650041A086"
                BuildableName = "CsoundAUSynthHTML.component"
                BlueprintName = "CsoundAUSynthHTML"
                ReferencedContainer = "container:CsoundAU.xcodeproj">
@@ -44,12 +44,12 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Volumes/Data/Applications/GarageBand.app">
+         FilePath = "/Applications/AU Lab.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+            BlueprintIdentifier = "443C606E1C9B32650041A086"
             BuildableName = "CsoundAUSynthHTML.component"
             BlueprintName = "CsoundAUSynthHTML"
             ReferencedContainer = "container:CsoundAU.xcodeproj">
@@ -57,8 +57,8 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$(SRCROOT)/Testing/Test_CsoundAUSynth.trak"
-            isEnabled = "NO">
+            argument = "$(SRCROOT)/CsoundAU/Testing/CsoundAUSynthHTML.trak"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
@@ -73,7 +73,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44DDE4611B5C2D1D0094B673"
+            BlueprintIdentifier = "443C606E1C9B32650041A086"
             BuildableName = "CsoundAUSynthHTML.component"
             BlueprintName = "CsoundAUSynthHTML"
             ReferencedContainer = "container:CsoundAU.xcodeproj">

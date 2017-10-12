@@ -1,9 +1,0 @@
-[
-    {
-        "name":"Slow Attack Long Release",
-        "parameters":{
-                        "Attack":0.9,
-                        "Release":0.5
-                     }
-    }
-]

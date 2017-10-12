@@ -2,12 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Csound AudioUnit</string>
+			<key>factoryFunction</key>
+			<string>CsoundAUFactory</string>
+			<key>manufacturer</key>
+			<string>csnd</string>
+			<key>name</key>
+			<string>Csound AudioUnit Synthesiser</string>
+			<key>sandboxSafe</key>
+			<true/>
+			<key>subtype</key>
+			<string>csnd</string>
+			<key>type</key>
+			<string>aumu</string>
+			<key>version</key>
+			<integer>65536</integer>
+			<key>tags</key>
+			<array>
+				<string>Synthesizer</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>CsoundAUSynthHTMLView</string>
+	<string>com.Csound.CsoundAUSynthHTML</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -23,6 +48,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 Csound. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>CsoundAUViewFactory</string>
+	<string></string>
 </dict>
 </plist>
