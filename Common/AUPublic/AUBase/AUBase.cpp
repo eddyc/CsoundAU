@@ -570,7 +570,7 @@ OSStatus			AUBase::DispatchGetProperty(	AudioUnitPropertyID 			inID,
 													AudioUnitElement			 	inElement,
 													void *							outData)
 {
-	// NOTE: We're currently only called from AUBase::ComponentEntryDispatch, which
+	// NOTE:10 We're currently only called from AUBase::ComponentEntryDispatch, which
 	// calls DispatchGetPropertyInfo first, which performs validation of the scope/element,
 	// and ensures that the outData buffer is non-null and large enough.
 	OSStatus result = noErr;

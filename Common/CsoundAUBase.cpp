@@ -6,6 +6,7 @@
 
 #include "CsoundAUBase.h"
 #include "JSONParserCpp.h"
+#include <Mactypes.h>
 
 CsoundAUBase::CsoundAUBase(AUBase *parent)
 {
@@ -138,9 +139,9 @@ void CsoundAUBase::SetPresets(vector<pair<string, Preset>> presetsIn)
     
 }
 
-ComponentResult CsoundAUBase::GetPresets (CFArrayRef	*outData) const
+SInt32 CsoundAUBase::GetPresets (CFArrayRef	*outData) const
 {
-    if (outData == NULL) return noErr;
+    if (outData == NULL) return -1;
     
     CFMutableArrayRef presetsArray = CFArrayCreateMutable (NULL,
                                                            auPresetMenuEntries.size(),
@@ -151,7 +152,7 @@ ComponentResult CsoundAUBase::GetPresets (CFArrayRef	*outData) const
     }
     
     *outData = (CFArrayRef)presetsArray;
-    return noErr;
+    return 0;
 }
 
 OSStatus CsoundAUBase::NewFactoryPresetSet (const AUPreset &inNewFactoryPreset)
@@ -178,7 +179,7 @@ OSStatus CsoundAUBase::NewFactoryPresetSet (const AUPreset &inNewFactoryPreset)
     return noErr;
 }
 
-ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
+SInt32 CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                                            AudioUnitScope inScope,
                                            AudioUnitElement inElement,
                                            void *outData,
@@ -196,14 +197,14 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                 
                 CFBundleRef bundle = CFBundleGetBundleWithIdentifier(bundleID);
                 
-                if (bundle == NULL) return fnfErr;
+                if (bundle == NULL) return -1;
                 
                 CFURLRef bundleURL = CFBundleCopyResourceURL(bundle,
                                                              guiBundleID,
                                                              CFSTR("bundle"),
                                                              NULL);
                 
-                if (bundleURL == NULL) return fnfErr;
+                if (bundleURL == NULL) return -1;
                 
                 AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {CFSTR("CsoundAUViewFactory")}};
                 *((AudioUnitCocoaViewInfo *)outData) = cocoaInfo;
@@ -216,12 +217,12 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
     return CallGetParentProperty((CsoundAUEffect *)parent, inID, inScope, inElement, outData);
 }
 
-ComponentResult CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
+SInt32 CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
                                                AudioUnitScope inScope,
                                                AudioUnitElement inElement,
                                                UInt32 &outDataSize,
                                                Boolean &outWritable,
-                                               ComponentResult (*CallGetParentPropertyInfo) (CsoundAUEffect *self,
+                                               SInt32 (*CallGetParentPropertyInfo) (CsoundAUEffect *self,
                                                                                              AudioUnitPropertyID inID,
                                                                                              AudioUnitScope inScope,
                                                                                              AudioUnitElement inElement,
@@ -243,7 +244,7 @@ ComponentResult CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
     return CallGetParentPropertyInfo ((CsoundAUEffect *)parent, inID, inScope, inElement, outDataSize, outWritable);
 }
 
-ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
+SInt32 CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                                            AudioUnitScope inScope,
                                            AudioUnitElement inElement,
                                            void *outData,
@@ -261,14 +262,14 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
                 
                 CFBundleRef bundle = CFBundleGetBundleWithIdentifier(bundleID);
                 
-                if (bundle == NULL) return fnfErr;
+                if (bundle == NULL) return -1;
                 
                 CFURLRef bundleURL = CFBundleCopyResourceURL(bundle,
                                                              guiBundleID,
                                                              CFSTR("bundle"),
                                                              NULL);
                 
-                if (bundleURL == NULL) return fnfErr;
+                if (bundleURL == NULL) return -1;
                 
                 AudioUnitCocoaViewInfo cocoaInfo = {bundleURL, {CFSTR("CsoundAUViewFactory")}};
                 *((AudioUnitCocoaViewInfo *)outData) = cocoaInfo;
@@ -281,12 +282,12 @@ ComponentResult CsoundAUBase::GetProperty (AudioUnitPropertyID inID,
     return CallGetParentProperty((CsoundAUSynth *)parent, inID, inScope, inElement, outData);
 }
 
-ComponentResult CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
+SInt32 CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
                                                AudioUnitScope inScope,
                                                AudioUnitElement inElement,
                                                UInt32 &outDataSize,
                                                Boolean &outWritable,
-                                               ComponentResult (*CallGetParentPropertyInfo) (CsoundAUSynth *self,
+                                               SInt32 (*CallGetParentPropertyInfo) (CsoundAUSynth *self,
                                                                                              AudioUnitPropertyID inID,
                                                                                              AudioUnitScope inScope,
                                                                                              AudioUnitElement inElement,
@@ -308,11 +309,11 @@ ComponentResult CsoundAUBase::GetPropertyInfo (AudioUnitPropertyID inID,
     return CallGetParentPropertyInfo ((CsoundAUSynth *)parent, inID, inScope, inElement, outDataSize, outWritable);
 }
 
-ComponentResult CsoundAUBase::GetParameterInfo(AudioUnitScope inScope,
+SInt32 CsoundAUBase::GetParameterInfo(AudioUnitScope inScope,
                                                AudioUnitParameterID inParameterID,
                                                AudioUnitParameterInfo &outParameterInfo)
 {
-    ComponentResult result = noErr;
+    SInt32 result = noErr;
     outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
     
     if (inParameterID >= parameters.size()) {
@@ -342,7 +343,7 @@ ComponentResult CsoundAUBase::GetParameterInfo(AudioUnitScope inScope,
     return result;
 }
 
-ComponentResult CsoundAUBase::GetParameterValueStrings(AudioUnitScope inScope,
+SInt32 CsoundAUBase::GetParameterValueStrings(AudioUnitScope inScope,
                                                        AudioUnitParameterID inParameterID,
                                                        CFArrayRef *outStrings)
 {

@@ -47,7 +47,7 @@
 /*
 	This file implements all Atomic operations using Interlocked functions specified in
 	Winbase.h
-NOTE: According to Microsoft documentation, all Interlocked functions generates a
+NOTE:0 According to Microsoft documentation, all Interlocked functions generates a
 full barrier. 
 	On Windows:
 	As the Interlocked functions returns the Old value, Extra checks and operations 

@@ -112,6 +112,10 @@ static NSMutableDictionary *parameterIndices;
             JSObjectCallAsFunction(ctx, function, NULL, 1, &obj, NULL);
             break;
         }
+        default: {
+            
+            break;
+        }
     }
 }
 

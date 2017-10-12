@@ -13,6 +13,10 @@
 		440C9D111B4AB58700B3E72F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440C9D0D1B4AB58700B3E72F /* CoreServices.framework */; };
 		440C9DAF1B4AD34E00B3E72F /* CsoundLib64.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440C9DAE1B4AD34E00B3E72F /* CsoundLib64.framework */; };
 		44451C771B61944C008364AE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 44DB688B1B5D772800D81C83 /* index.html */; };
+		444FFD491BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */; };
+		444FFD4A1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */; };
+		444FFD4B1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */; };
+		444FFD4C1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */; };
 		447B064E1B5D7A8300557438 /* CsoundAUHTMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B064D1B5D7A8300557438 /* CsoundAUHTMLView.m */; };
 		447B06531B5D9B8F00557438 /* CsoundAUViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B06501B5D9B8F00557438 /* CsoundAUViewBase.m */; };
 		447B06551B5D9DAB00557438 /* CsoundAUHTMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447B064D1B5D7A8300557438 /* CsoundAUHTMLView.m */; };
@@ -22,18 +26,12 @@
 		449FE63E1B5316B500424527 /* Presets.json in Resources */ = {isa = PBXBuildFile; fileRef = 449FE63D1B5316B500424527 /* Presets.json */; };
 		44D3DEDD1B501C86005B28A3 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE881B501C86005B28A3 /* AUBase.cpp */; };
 		44D3DEDE1B501C86005B28A3 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE881B501C86005B28A3 /* AUBase.cpp */; };
-		44D3DEDF1B501C86005B28A3 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */; };
-		44D3DEE01B501C86005B28A3 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */; };
 		44D3DEE11B501C86005B28A3 /* AUInputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8C1B501C86005B28A3 /* AUInputElement.cpp */; };
 		44D3DEE21B501C86005B28A3 /* AUInputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8C1B501C86005B28A3 /* AUInputElement.cpp */; };
 		44D3DEE31B501C86005B28A3 /* AUOutputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8E1B501C86005B28A3 /* AUOutputElement.cpp */; };
 		44D3DEE41B501C86005B28A3 /* AUOutputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8E1B501C86005B28A3 /* AUOutputElement.cpp */; };
-		44D3DEE51B501C86005B28A3 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */; };
-		44D3DEE61B501C86005B28A3 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */; };
 		44D3DEE71B501C86005B28A3 /* AUScopeElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */; };
 		44D3DEE81B501C86005B28A3 /* AUScopeElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */; };
-		44D3DEE91B501C86005B28A3 /* ComponentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE941B501C86005B28A3 /* ComponentBase.cpp */; };
-		44D3DEEA1B501C86005B28A3 /* ComponentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE941B501C86005B28A3 /* ComponentBase.cpp */; };
 		44D3DEEB1B501C86005B28A3 /* AUInstrumentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE971B501C86005B28A3 /* AUInstrumentBase.cpp */; };
 		44D3DEEC1B501C86005B28A3 /* AUInstrumentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE971B501C86005B28A3 /* AUInstrumentBase.cpp */; };
 		44D3DEED1B501C86005B28A3 /* SynthElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE9B1B501C86005B28A3 /* SynthElement.cpp */; };
@@ -108,7 +106,6 @@
 		44D750DC1B70141900845A73 /* MusicDeviceBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEA71B501C86005B28A3 /* MusicDeviceBase.cpp */; };
 		44D750DD1B70141900845A73 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEC91B501C86005B28A3 /* CADebugPrintf.cpp */; };
 		44D750DE1B70141900845A73 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE881B501C86005B28A3 /* AUBase.cpp */; };
-		44D750DF1B70141900845A73 /* ComponentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE941B501C86005B28A3 /* ComponentBase.cpp */; };
 		44D750E01B70141900845A73 /* SynthNoteList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEA01B501C86005B28A3 /* SynthNoteList.cpp */; };
 		44D750E11B70141900845A73 /* CABufferList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEC21B501C86005B28A3 /* CABufferList.cpp */; };
 		44D750E21B70141900845A73 /* CAGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DECC1B501C86005B28A3 /* CAGuard.cpp */; };
@@ -117,8 +114,6 @@
 		44D750E51B70141900845A73 /* CsoundAUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEB11B501C86005B28A3 /* CsoundAUBase.cpp */; };
 		44D750E61B70141900845A73 /* SynthElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE9B1B501C86005B28A3 /* SynthElement.cpp */; };
 		44D750E71B70141900845A73 /* AUScopeElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */; };
-		44D750E81B70141900845A73 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */; };
-		44D750E91B70141900845A73 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */; };
 		44D750EA1B70141900845A73 /* AUBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEAC1B501C86005B28A3 /* AUBuffer.cpp */; };
 		44D750EB1B70141900845A73 /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DECE1B501C86005B28A3 /* CAHostTimeBase.cpp */; };
 		44D750EC1B70141900845A73 /* AUInstrumentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE971B501C86005B28A3 /* AUInstrumentBase.cpp */; };
@@ -174,7 +169,6 @@
 		44DDE4721B5C2D1D0094B673 /* MusicDeviceBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEA71B501C86005B28A3 /* MusicDeviceBase.cpp */; };
 		44DDE4731B5C2D1D0094B673 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEC91B501C86005B28A3 /* CADebugPrintf.cpp */; };
 		44DDE4741B5C2D1D0094B673 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE881B501C86005B28A3 /* AUBase.cpp */; };
-		44DDE4751B5C2D1D0094B673 /* ComponentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE941B501C86005B28A3 /* ComponentBase.cpp */; };
 		44DDE4761B5C2D1D0094B673 /* SynthNoteList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEA01B501C86005B28A3 /* SynthNoteList.cpp */; };
 		44DDE4771B5C2D1D0094B673 /* CABufferList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEC21B501C86005B28A3 /* CABufferList.cpp */; };
 		44DDE4781B5C2D1D0094B673 /* CAGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DECC1B501C86005B28A3 /* CAGuard.cpp */; };
@@ -183,8 +177,6 @@
 		44DDE47B1B5C2D1D0094B673 /* CsoundAUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEB11B501C86005B28A3 /* CsoundAUBase.cpp */; };
 		44DDE47C1B5C2D1D0094B673 /* SynthElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE9B1B501C86005B28A3 /* SynthElement.cpp */; };
 		44DDE47D1B5C2D1D0094B673 /* AUScopeElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */; };
-		44DDE47E1B5C2D1D0094B673 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */; };
-		44DDE47F1B5C2D1D0094B673 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */; };
 		44DDE4801B5C2D1D0094B673 /* AUBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DEAC1B501C86005B28A3 /* AUBuffer.cpp */; };
 		44DDE4811B5C2D1D0094B673 /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DECE1B501C86005B28A3 /* CAHostTimeBase.cpp */; };
 		44DDE4821B5C2D1D0094B673 /* AUInstrumentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D3DE971B501C86005B28A3 /* AUInstrumentBase.cpp */; };
@@ -247,6 +239,8 @@
 		440C9D0C1B4AB58700B3E72F /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		440C9D0D1B4AB58700B3E72F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		440C9DAE1B4AD34E00B3E72F /* CsoundLib64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CsoundLib64.framework; path = ../../../../../Users/eddyc/Library/Frameworks/CsoundLib64.framework; sourceTree = "<group>"; };
+		444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUPlugInDispatch.cpp; sourceTree = "<group>"; };
+		444FFD481BDEB93000945686 /* AUPlugInDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUPlugInDispatch.h; sourceTree = "<group>"; };
 		447B064C1B5D7A8300557438 /* CsoundAUHTMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUHTMLView.h; sourceTree = "<group>"; };
 		447B064D1B5D7A8300557438 /* CsoundAUHTMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CsoundAUHTMLView.m; sourceTree = "<group>"; };
 		447B064F1B5D9B8F00557438 /* CsoundAUViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CsoundAUViewBase.h; sourceTree = "<group>"; };
@@ -255,18 +249,12 @@
 		449FE63D1B5316B500424527 /* Presets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Presets.json; sourceTree = "<group>"; };
 		44D3DE881B501C86005B28A3 /* AUBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUBase.cpp; sourceTree = "<group>"; };
 		44D3DE891B501C86005B28A3 /* AUBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUBase.h; sourceTree = "<group>"; };
-		44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUDispatch.cpp; sourceTree = "<group>"; };
-		44D3DE8B1B501C86005B28A3 /* AUDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUDispatch.h; sourceTree = "<group>"; };
 		44D3DE8C1B501C86005B28A3 /* AUInputElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUInputElement.cpp; sourceTree = "<group>"; };
 		44D3DE8D1B501C86005B28A3 /* AUInputElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUInputElement.h; sourceTree = "<group>"; };
 		44D3DE8E1B501C86005B28A3 /* AUOutputElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUOutputElement.cpp; sourceTree = "<group>"; };
 		44D3DE8F1B501C86005B28A3 /* AUOutputElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUOutputElement.h; sourceTree = "<group>"; };
-		44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUPlugInDispatch.cpp; sourceTree = "<group>"; };
-		44D3DE911B501C86005B28A3 /* AUPlugInDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUPlugInDispatch.h; sourceTree = "<group>"; };
 		44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUScopeElement.cpp; sourceTree = "<group>"; };
 		44D3DE931B501C86005B28A3 /* AUScopeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUScopeElement.h; sourceTree = "<group>"; };
-		44D3DE941B501C86005B28A3 /* ComponentBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentBase.cpp; sourceTree = "<group>"; };
-		44D3DE951B501C86005B28A3 /* ComponentBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentBase.h; sourceTree = "<group>"; };
 		44D3DE971B501C86005B28A3 /* AUInstrumentBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUInstrumentBase.cpp; sourceTree = "<group>"; };
 		44D3DE981B501C86005B28A3 /* AUInstrumentBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUInstrumentBase.h; sourceTree = "<group>"; };
 		44D3DE991B501C86005B28A3 /* LockFreeFIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockFreeFIFO.h; sourceTree = "<group>"; };
@@ -539,18 +527,14 @@
 			children = (
 				44D3DE881B501C86005B28A3 /* AUBase.cpp */,
 				44D3DE891B501C86005B28A3 /* AUBase.h */,
-				44D3DE8A1B501C86005B28A3 /* AUDispatch.cpp */,
-				44D3DE8B1B501C86005B28A3 /* AUDispatch.h */,
 				44D3DE8C1B501C86005B28A3 /* AUInputElement.cpp */,
 				44D3DE8D1B501C86005B28A3 /* AUInputElement.h */,
+				444FFD471BDEB93000945686 /* AUPlugInDispatch.cpp */,
+				444FFD481BDEB93000945686 /* AUPlugInDispatch.h */,
 				44D3DE8E1B501C86005B28A3 /* AUOutputElement.cpp */,
 				44D3DE8F1B501C86005B28A3 /* AUOutputElement.h */,
-				44D3DE901B501C86005B28A3 /* AUPlugInDispatch.cpp */,
-				44D3DE911B501C86005B28A3 /* AUPlugInDispatch.h */,
 				44D3DE921B501C86005B28A3 /* AUScopeElement.cpp */,
 				44D3DE931B501C86005B28A3 /* AUScopeElement.h */,
-				44D3DE941B501C86005B28A3 /* ComponentBase.cpp */,
-				44D3DE951B501C86005B28A3 /* ComponentBase.h */,
 			);
 			path = AUBase;
 			sourceTree = "<group>";
@@ -894,7 +878,7 @@
 		440C9CF71B4AB1CB00B3E72F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					440C9D001B4AB1D700B3E72F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1038,17 +1022,15 @@
 				44D3DEF71B501C86005B28A3 /* MusicDeviceBase.cpp in Sources */,
 				44D3DF131B501C86005B28A3 /* CADebugPrintf.cpp in Sources */,
 				44D3DEDD1B501C86005B28A3 /* AUBase.cpp in Sources */,
-				44D3DEE91B501C86005B28A3 /* ComponentBase.cpp in Sources */,
 				44D3DEF11B501C86005B28A3 /* SynthNoteList.cpp in Sources */,
 				44D3DF0D1B501C86005B28A3 /* CABufferList.cpp in Sources */,
+				444FFD491BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */,
 				44D3DF151B501C86005B28A3 /* CAGuard.cpp in Sources */,
 				44D3DF1D1B501C86005B28A3 /* CAVectorUnit.cpp in Sources */,
 				44D3DF0B1B501C86005B28A3 /* CAAUMIDIMapManager.cpp in Sources */,
 				44D3DEFF1B501C86005B28A3 /* CsoundAUBase.cpp in Sources */,
 				44D3DEED1B501C86005B28A3 /* SynthElement.cpp in Sources */,
 				44D3DEE71B501C86005B28A3 /* AUScopeElement.cpp in Sources */,
-				44D3DEE51B501C86005B28A3 /* AUPlugInDispatch.cpp in Sources */,
-				44D3DEDF1B501C86005B28A3 /* AUDispatch.cpp in Sources */,
 				44D3DEFB1B501C86005B28A3 /* AUBuffer.cpp in Sources */,
 				44D3DF171B501C86005B28A3 /* CAHostTimeBase.cpp in Sources */,
 				44D3DEEB1B501C86005B28A3 /* AUInstrumentBase.cpp in Sources */,
@@ -1078,17 +1060,15 @@
 				44D3DEF81B501C86005B28A3 /* MusicDeviceBase.cpp in Sources */,
 				44D3DF141B501C86005B28A3 /* CADebugPrintf.cpp in Sources */,
 				44D3DEDE1B501C86005B28A3 /* AUBase.cpp in Sources */,
-				44D3DEEA1B501C86005B28A3 /* ComponentBase.cpp in Sources */,
 				44D3DEF21B501C86005B28A3 /* SynthNoteList.cpp in Sources */,
 				44D3DF0E1B501C86005B28A3 /* CABufferList.cpp in Sources */,
 				44D3DF161B501C86005B28A3 /* CAGuard.cpp in Sources */,
+				444FFD4B1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */,
 				44D3DF1E1B501C86005B28A3 /* CAVectorUnit.cpp in Sources */,
 				44D3DF0C1B501C86005B28A3 /* CAAUMIDIMapManager.cpp in Sources */,
 				44D3DF001B501C86005B28A3 /* CsoundAUBase.cpp in Sources */,
 				44D3DEEE1B501C86005B28A3 /* SynthElement.cpp in Sources */,
 				44D3DEE81B501C86005B28A3 /* AUScopeElement.cpp in Sources */,
-				44D3DEE61B501C86005B28A3 /* AUPlugInDispatch.cpp in Sources */,
-				44D3DEE01B501C86005B28A3 /* AUDispatch.cpp in Sources */,
 				44D3DEFC1B501C86005B28A3 /* AUBuffer.cpp in Sources */,
 				44D3DF181B501C86005B28A3 /* CAHostTimeBase.cpp in Sources */,
 				44D3DEEC1B501C86005B28A3 /* AUInstrumentBase.cpp in Sources */,
@@ -1145,17 +1125,15 @@
 				44D750DC1B70141900845A73 /* MusicDeviceBase.cpp in Sources */,
 				44D750DD1B70141900845A73 /* CADebugPrintf.cpp in Sources */,
 				44D750DE1B70141900845A73 /* AUBase.cpp in Sources */,
-				44D750DF1B70141900845A73 /* ComponentBase.cpp in Sources */,
 				44D750E01B70141900845A73 /* SynthNoteList.cpp in Sources */,
 				44D750E11B70141900845A73 /* CABufferList.cpp in Sources */,
 				44D750E21B70141900845A73 /* CAGuard.cpp in Sources */,
+				444FFD4C1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */,
 				44D750E31B70141900845A73 /* CAVectorUnit.cpp in Sources */,
 				44D750E41B70141900845A73 /* CAAUMIDIMapManager.cpp in Sources */,
 				44D750E51B70141900845A73 /* CsoundAUBase.cpp in Sources */,
 				44D750E61B70141900845A73 /* SynthElement.cpp in Sources */,
 				44D750E71B70141900845A73 /* AUScopeElement.cpp in Sources */,
-				44D750E81B70141900845A73 /* AUPlugInDispatch.cpp in Sources */,
-				44D750E91B70141900845A73 /* AUDispatch.cpp in Sources */,
 				44D750EA1B70141900845A73 /* AUBuffer.cpp in Sources */,
 				44D750EB1B70141900845A73 /* CAHostTimeBase.cpp in Sources */,
 				44D750EC1B70141900845A73 /* AUInstrumentBase.cpp in Sources */,
@@ -1198,17 +1176,15 @@
 				44DDE4721B5C2D1D0094B673 /* MusicDeviceBase.cpp in Sources */,
 				44DDE4731B5C2D1D0094B673 /* CADebugPrintf.cpp in Sources */,
 				44DDE4741B5C2D1D0094B673 /* AUBase.cpp in Sources */,
-				44DDE4751B5C2D1D0094B673 /* ComponentBase.cpp in Sources */,
 				44DDE4761B5C2D1D0094B673 /* SynthNoteList.cpp in Sources */,
 				44DDE4771B5C2D1D0094B673 /* CABufferList.cpp in Sources */,
+				444FFD4A1BDEB93000945686 /* AUPlugInDispatch.cpp in Sources */,
 				44DDE4781B5C2D1D0094B673 /* CAGuard.cpp in Sources */,
 				44DDE4791B5C2D1D0094B673 /* CAVectorUnit.cpp in Sources */,
 				44DDE47A1B5C2D1D0094B673 /* CAAUMIDIMapManager.cpp in Sources */,
 				44DDE47B1B5C2D1D0094B673 /* CsoundAUBase.cpp in Sources */,
 				44DDE47C1B5C2D1D0094B673 /* SynthElement.cpp in Sources */,
 				44DDE47D1B5C2D1D0094B673 /* AUScopeElement.cpp in Sources */,
-				44DDE47E1B5C2D1D0094B673 /* AUPlugInDispatch.cpp in Sources */,
-				44DDE47F1B5C2D1D0094B673 /* AUDispatch.cpp in Sources */,
 				44DDE4801B5C2D1D0094B673 /* AUBuffer.cpp in Sources */,
 				44DDE4811B5C2D1D0094B673 /* CAHostTimeBase.cpp in Sources */,
 				44DDE4821B5C2D1D0094B673 /* AUInstrumentBase.cpp in Sources */,
@@ -1259,7 +1235,9 @@
 		440C9CFB1B4AB1CB00B3E72F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -1268,6 +1246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 			};
 			name = Release;
 		};
@@ -1303,7 +1282,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
 					"DEBUG=1",
 					"BUNDLEID=\\\"${PRODUCT_NAME:rfc1034identifier}\\\"",
@@ -1322,6 +1301,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1360,7 +1340,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "BUNDLEID=\\\"${PRODUCT_NAME:rfc1034identifier}\\\"";
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1373,6 +1353,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1412,7 +1393,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
 					"DEBUG=1",
 					"BUNDLEID=\\\"${PRODUCT_NAME:rfc1034identifier}\\\"",
@@ -1431,6 +1412,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1469,7 +1451,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "BUNDLEID=\\\"${PRODUCT_NAME:rfc1034identifier}\\\"";
+				GCC_PREPROCESSOR_DEFINITIONS = "CA_USE_AUDIO_PLUGIN_ONLY=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1482,6 +1464,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1536,6 +1519,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1584,6 +1568,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1633,6 +1618,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1675,6 +1661,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1733,6 +1720,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUEffectHTML;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1784,6 +1772,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUEffectHTML;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1838,6 +1827,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUEffectHTMLView;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1886,6 +1876,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUEffectHTMLView;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1944,6 +1935,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUSynthHTML;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -1995,6 +1987,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUSynthHTML;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -2049,6 +2042,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUSynthHTMLView;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2097,6 +2091,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CsoundAUSynthHTMLView;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
